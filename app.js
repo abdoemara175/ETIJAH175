@@ -303,6 +303,27 @@ class AppController {
     }
   }
 
+  showTimerEndedMessage() {
+    const output = document.getElementById("output");
+    if (!output) return;
+
+    const message = document.createElement("div");
+    message.className = "timer-ended-message";
+    message.innerHTML = `
+      <div style="text-align: center; padding: 20px; color: var(--accent-primary); font-size: 1.1rem;">
+        ⏱️ انتهى الوقت!
+      </div>
+    `;
+    
+    output.appendChild(message);
+    
+    // Auto-hide after 2 seconds
+    setTimeout(() => {
+      message.style.opacity = "0";
+      setTimeout(() => message.remove(), 300);
+    }, 2000);
+  }
+
   hideConfirmationButtons() {
     const confirmSection = document.getElementById("confirmSection");
     if (confirmSection) {
