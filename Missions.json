@@ -13,7 +13,10 @@
         "ذاكر بدون مشتتات"
       ],
       "success_condition": "25 دقيقة تركيز كامل",
-      "tools_allowed": ["book", "laptop"],
+      "tools_allowed": [
+        "book",
+        "laptop"
+      ],
       "anti_distraction_rule": "ممنوع الموبايل"
     },
     {
@@ -29,7 +32,9 @@
         "راجع الأخطاء"
       ],
       "success_condition": "3 مسائل محلولة",
-      "tools_allowed": ["notes"],
+      "tools_allowed": [
+        "notes"
+      ],
       "anti_distraction_rule": "وضع صامت"
     },
     {
@@ -45,7 +50,10 @@
         "احذف غير المهم"
       ],
       "success_condition": "خطة يوم واضحة",
-      "tools_allowed": ["paper", "app"],
+      "tools_allowed": [
+        "paper",
+        "app"
+      ],
       "anti_distraction_rule": "بدون سوشيال"
     },
     {
@@ -61,7 +69,9 @@
         "سجل فكرة واحدة"
       ],
       "success_condition": "20 دقيقة قراءة",
-      "tools_allowed": ["book"],
+      "tools_allowed": [
+        "book"
+      ],
       "anti_distraction_rule": "بدون هاتف"
     },
     {
@@ -109,7 +119,9 @@
         "جرب تطبيق"
       ],
       "success_condition": "تجربة عملية",
-      "tools_allowed": ["laptop"],
+      "tools_allowed": [
+        "laptop"
+      ],
       "anti_distraction_rule": "بدون سوشيال"
     },
     {
@@ -125,7 +137,9 @@
         "استخرج فكرة واحدة"
       ],
       "success_condition": "صفحة مكتوبة",
-      "tools_allowed": ["paper"],
+      "tools_allowed": [
+        "paper"
+      ],
       "anti_distraction_rule": "بدون حكم على نفسك"
     },
     {
@@ -157,7 +171,9 @@
         "لا تكمل كل شيء"
       ],
       "success_condition": "بدء فعلي",
-      "tools_allowed": ["laptop"],
+      "tools_allowed": [
+        "laptop"
+      ],
       "anti_distraction_rule": "لا تسويف"
     },
     {
@@ -173,7 +189,10 @@
         "حل تطبيق بسيط"
       ],
       "success_condition": "30 دقيقة بدون مشتتات",
-      "tools_allowed": ["book", "laptop"],
+      "tools_allowed": [
+        "book",
+        "laptop"
+      ],
       "anti_distraction_rule": "ممنوع الهاتف"
     },
     {
@@ -189,7 +208,9 @@
         "راجع الإجابات"
       ],
       "success_condition": "حل نموذج كامل أو جزئي",
-      "tools_allowed": ["paper"],
+      "tools_allowed": [
+        "paper"
+      ],
       "anti_distraction_rule": "بدون مصادر خارجية"
     },
     {
@@ -205,7 +226,9 @@
         "جربها بنفسك"
       ],
       "success_condition": "تجربة عملية",
-      "tools_allowed": ["laptop"],
+      "tools_allowed": [
+        "laptop"
+      ],
       "anti_distraction_rule": "لا تشتيت"
     },
     {
@@ -221,7 +244,9 @@
         "راجع لاحقًا"
       ],
       "success_condition": "صفحة مكتوبة",
-      "tools_allowed": ["paper"],
+      "tools_allowed": [
+        "paper"
+      ],
       "anti_distraction_rule": "بدون تعديل أثناء الكتابة"
     },
     {
@@ -240,7 +265,6 @@
       "tools_allowed": [],
       "anti_distraction_rule": "لا توقف"
     },
-
     {
       "id": "m16",
       "title": "تنظيف كامل المكتب الرقمي",
@@ -254,7 +278,9 @@
         "نظف سطح المكتب"
       ],
       "success_condition": "نظام مرتب",
-      "tools_allowed": ["laptop"],
+      "tools_allowed": [
+        "laptop"
+      ],
       "anti_distraction_rule": "بدون تصفح عشوائي"
     },
     {
@@ -302,7 +328,9 @@
         "لا تقطع القراءة"
       ],
       "success_condition": "25 دقيقة قراءة",
-      "tools_allowed": ["book"],
+      "tools_allowed": [
+        "book"
+      ],
       "anti_distraction_rule": "لا هاتف"
     },
     {
@@ -318,10 +346,11 @@
         "راجع الأخطاء"
       ],
       "success_condition": "5 أسئلة محلولة",
-      "tools_allowed": ["paper"],
+      "tools_allowed": [
+        "paper"
+      ],
       "anti_distraction_rule": "بدون مساعدات"
     },
-
     {
       "id": "m21",
       "title": "جلسة تركيز 15 دقيقة",
@@ -351,7 +380,9 @@
         "جرب تطبيق"
       ],
       "success_condition": "فهم مفهوم واحد",
-      "tools_allowed": ["laptop"],
+      "tools_allowed": [
+        "laptop"
+      ],
       "anti_distraction_rule": "لا تنقل بين مصادر"
     },
     {
@@ -415,7 +446,9 @@
         "اشتغل بدون توقف"
       ],
       "success_condition": "40 دقيقة تركيز كامل",
-      "tools_allowed": ["laptop"],
+      "tools_allowed": [
+        "laptop"
+      ],
       "anti_distraction_rule": "ممنوع أي تطبيق غير المهمة"
     },
     {
@@ -431,7 +464,9 @@
         "اختبر النتيجة"
       ],
       "success_condition": "جزء مكتمل من مشروع",
-      "tools_allowed": ["laptop"],
+      "tools_allowed": [
+        "laptop"
+      ],
       "anti_distraction_rule": "بدون تبديل مهام"
     },
     {
@@ -447,7 +482,9 @@
         "كرر التجربة"
       ],
       "success_condition": "تطبيق عملي",
-      "tools_allowed": ["laptop"],
+      "tools_allowed": [
+        "laptop"
+      ],
       "anti_distraction_rule": "مصدر واحد فقط"
     },
     {
@@ -463,7 +500,9 @@
         "اكتب استنتاج"
       ],
       "success_condition": "تحليل مكتوب",
-      "tools_allowed": ["paper"],
+      "tools_allowed": [
+        "paper"
+      ],
       "anti_distraction_rule": "بدون حذف أو تعديل زائد"
     },
     {
@@ -482,7 +521,6 @@
       "tools_allowed": [],
       "anti_distraction_rule": "بدون جلد ذات"
     },
-
     {
       "id": "m31",
       "title": "جلسة رياضية مكثفة",
@@ -544,7 +582,9 @@
         "استخرج فكرة"
       ],
       "success_condition": "تحليل صفحة",
-      "tools_allowed": ["book"],
+      "tools_allowed": [
+        "book"
+      ],
       "anti_distraction_rule": "بدون هاتف"
     },
     {
@@ -560,10 +600,11 @@
         "راجع الأخطاء"
       ],
       "success_condition": "10 أسئلة محلولة",
-      "tools_allowed": ["paper"],
+      "tools_allowed": [
+        "paper"
+      ],
       "anti_distraction_rule": "لا مصادر خارجية"
     },
-
     {
       "id": "m36",
       "title": "جلسة إنتاج مركزة",
@@ -577,7 +618,9 @@
         "أنجز جزء واضح"
       ],
       "success_condition": "مخرجات واضحة",
-      "tools_allowed": ["laptop"],
+      "tools_allowed": [
+        "laptop"
+      ],
       "anti_distraction_rule": "لا تبديل مهام"
     },
     {
@@ -593,7 +636,9 @@
         "عدل نتيجة"
       ],
       "success_condition": "تجربة فعلية",
-      "tools_allowed": ["laptop"],
+      "tools_allowed": [
+        "laptop"
+      ],
       "anti_distraction_rule": "مصدر واحد"
     },
     {
@@ -641,7 +686,9 @@
         "حدد خطوة"
       ],
       "success_condition": "حل مكتوب",
-      "tools_allowed": ["paper"],
+      "tools_allowed": [
+        "paper"
+      ],
       "anti_distraction_rule": "هدوء كامل"
     },
     {
@@ -657,7 +704,9 @@
         "اختبر النتيجة"
       ],
       "success_condition": "ميزة واحدة مكتملة",
-      "tools_allowed": ["laptop"],
+      "tools_allowed": [
+        "laptop"
+      ],
       "anti_distraction_rule": "ممنوع أي مهام جانبية"
     },
     {
@@ -673,7 +722,9 @@
         "حدد القيمة"
       ],
       "success_condition": "صفحة واضحة",
-      "tools_allowed": ["paper"],
+      "tools_allowed": [
+        "paper"
+      ],
       "anti_distraction_rule": "بدون تعديل زائد"
     },
     {
@@ -689,7 +740,9 @@
         "راجع الأخطاء"
       ],
       "success_condition": "اختبار مكتمل",
-      "tools_allowed": ["paper"],
+      "tools_allowed": [
+        "paper"
+      ],
       "anti_distraction_rule": "بدون مصادر مساعدة"
     },
     {
@@ -724,7 +777,6 @@
       "tools_allowed": [],
       "anti_distraction_rule": "بدون موبايل"
     },
-
     {
       "id": "m46",
       "title": "جلسة تطوير مهارة تقنية",
@@ -738,7 +790,9 @@
         "عدل النتيجة"
       ],
       "success_condition": "تطبيق عملي كامل",
-      "tools_allowed": ["laptop"],
+      "tools_allowed": [
+        "laptop"
+      ],
       "anti_distraction_rule": "مصدر واحد فقط"
     },
     {
@@ -770,7 +824,9 @@
         "اختبر"
       ],
       "success_condition": "جزء برمجي يعمل",
-      "tools_allowed": ["laptop"],
+      "tools_allowed": [
+        "laptop"
+      ],
       "anti_distraction_rule": "بدون تبديل سياق"
     },
     {
@@ -786,7 +842,9 @@
         "اكتب استنتاج"
       ],
       "success_condition": "تحليل مكتوب",
-      "tools_allowed": ["book"],
+      "tools_allowed": [
+        "book"
+      ],
       "anti_distraction_rule": "بدون هاتف"
     },
     {
@@ -802,10 +860,11 @@
         "راجع الأخطاء"
       ],
       "success_condition": "15 سؤال محلول",
-      "tools_allowed": ["paper"],
+      "tools_allowed": [
+        "paper"
+      ],
       "anti_distraction_rule": "لا مصادر خارجية"
     },
-
     {
       "id": "m51",
       "title": "جلسة إنتاج محتوى",
@@ -819,7 +878,9 @@
         "راجع الناتج"
       ],
       "success_condition": "محتوى مكتمل",
-      "tools_allowed": ["laptop"],
+      "tools_allowed": [
+        "laptop"
+      ],
       "anti_distraction_rule": "بدون سوشيال"
     },
     {
@@ -835,7 +896,9 @@
         "اكتب حل"
       ],
       "success_condition": "تحليل واضح",
-      "tools_allowed": ["paper"],
+      "tools_allowed": [
+        "paper"
+      ],
       "anti_distraction_rule": "بدون حكم ذاتي"
     },
     {
@@ -868,7 +931,9 @@
         "طبق مثال"
       ],
       "success_condition": "فهم شامل",
-      "tools_allowed": ["laptop"],
+      "tools_allowed": [
+        "laptop"
+      ],
       "anti_distraction_rule": "مصدر واحد"
     },
     {
@@ -887,7 +952,6 @@
       "tools_allowed": [],
       "anti_distraction_rule": "بدون تصفح"
     },
-
     {
       "id": "m56",
       "title": "جلسة إنجاز مهمة صعبة",
@@ -901,7 +965,9 @@
         "اكمل جزء مهم"
       ],
       "success_condition": "جزء مكتمل",
-      "tools_allowed": ["laptop"],
+      "tools_allowed": [
+        "laptop"
+      ],
       "anti_distraction_rule": "لا استسلام"
     },
     {
@@ -917,7 +983,9 @@
         "ابدأ خطوة"
       ],
       "success_condition": "خطة تطوير",
-      "tools_allowed": ["paper"],
+      "tools_allowed": [
+        "paper"
+      ],
       "anti_distraction_rule": "تركيز كامل"
     },
     {
@@ -933,7 +1001,9 @@
         "راجع"
       ],
       "success_condition": "فهم + تطبيق",
-      "tools_allowed": ["laptop"],
+      "tools_allowed": [
+        "laptop"
+      ],
       "anti_distraction_rule": "مصدر واحد"
     },
     {

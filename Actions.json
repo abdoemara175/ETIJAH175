@@ -5,1577 +5,2402 @@
       "action": "امشِ",
       "category": "movement",
       "intensity": "low",
-      "time": ["any"],
+      "time": [
+        "any"
+      ],
       "cooldown": 72,
       "requires_tools": false,
       "goal": "Break loop",
       "success_condition": "5–10 دقائق مشي بدون هاتف",
       "guidance": "اخرج وامشِ فورًا بدون موبايل",
-      "variations": ["امشِ داخل البيت", "امشِ خارج الغرفة", "امشِ مع تنفس عميق"]
+      "variations": [
+        "امشِ داخل البيت",
+        "امشِ خارج الغرفة",
+        "امشِ مع تنفس عميق"
+      ],
+      "duration": 300
     },
     {
       "id": "a2",
       "action": "امشِ سريع",
       "category": "movement",
       "intensity": "medium",
-      "time": ["any"],
+      "time": [
+        "any"
+      ],
       "cooldown": 72,
       "requires_tools": false,
       "goal": "Energy",
       "success_condition": "5–8 دقائق",
       "guidance": "امشِ بسرعة متوسطة",
-      "variations": ["حول البيت", "في الشارع", "بدون هاتف"]
+      "variations": [
+        "حول البيت",
+        "في الشارع",
+        "بدون هاتف"
+      ],
+      "duration": 300
     },
     {
       "id": "a3",
       "action": "اجري",
       "category": "movement",
       "intensity": "high",
-      "time": ["morning","day"],
+      "time": [
+        "morning",
+        "day"
+      ],
       "cooldown": 72,
       "requires_tools": false,
       "goal": "Energy",
       "success_condition": "10–15 دقيقة جري",
       "guidance": "اجري بوتيرة ثابتة",
-      "variations": ["جري خفيف", "Intervals", "جري في المكان"]
+      "variations": [
+        "جري خفيف",
+        "Intervals",
+        "جري في المكان"
+      ],
+      "duration": 600
     },
     {
       "id": "a4",
       "action": "اطلع سلالم",
       "category": "movement",
       "intensity": "medium",
-      "time": ["any"],
+      "time": [
+        "any"
+      ],
       "cooldown": 72,
       "requires_tools": false,
       "goal": "Energy",
       "success_condition": "3–10 دقائق",
       "guidance": "اصعد وانزل السلالم",
-      "variations": ["5 طوابق", "10 دقائق", "تكرار"]
+      "variations": [
+        "5 طوابق",
+        "10 دقائق",
+        "تكرار"
+      ],
+      "duration": 180
     },
     {
       "id": "a5",
       "action": "تمدد",
       "category": "reset",
       "intensity": "low",
-      "time": ["any"],
+      "time": [
+        "any"
+      ],
       "cooldown": 12,
       "requires_tools": false,
       "goal": "Reset",
       "success_condition": "3–5 دقائق",
       "guidance": "مد جسمك ببطء",
-      "variations": ["تمدد كامل", "رقبة وظهر", "قبل النوم"]
+      "variations": [
+        "تمدد كامل",
+        "رقبة وظهر",
+        "قبل النوم"
+      ],
+      "duration": 180
     },
     {
       "id": "a6",
       "action": "اشرب مية",
       "category": "reset",
       "intensity": "low",
-      "time": ["any"],
+      "time": [
+        "any"
+      ],
       "cooldown": 12,
       "requires_tools": false,
       "goal": "Reset",
       "success_condition": "كوب ماء كامل",
       "guidance": "اشرب فورًا",
-      "variations": ["كوب بارد", "كوبين", "ببطء"]
+      "variations": [
+        "كوب بارد",
+        "كوبين",
+        "ببطء"
+      ],
+      "duration": 300
     },
     {
       "id": "a7",
       "action": "اغسل وشك",
       "category": "reset",
       "intensity": "low",
-      "time": ["any"],
+      "time": [
+        "any"
+      ],
       "cooldown": 12,
       "requires_tools": false,
       "goal": "Reset",
       "success_condition": "تنشيط فوري",
       "guidance": "اغسل وجهك",
-      "variations": ["ماء بارد", "مرتين", "تنشيط صباحي"]
+      "variations": [
+        "ماء بارد",
+        "مرتين",
+        "تنشيط صباحي"
+      ],
+      "duration": 300
     },
     {
       "id": "a8",
       "action": "اقفل الموبايل",
       "category": "anti_addiction",
       "intensity": "high",
-      "time": ["any"],
+      "time": [
+        "any"
+      ],
       "cooldown": 6,
       "requires_tools": false,
       "goal": "Break loop",
       "success_condition": "10 دقائق بدون هاتف",
       "guidance": "اقفل الهاتف فورًا",
-      "variations": ["وضع طيران", "بعيد عنه", "إغلاق كامل"]
+      "variations": [
+        "وضع طيران",
+        "بعيد عنه",
+        "إغلاق كامل"
+      ],
+      "duration": 600
     },
     {
       "id": "a9",
       "action": "ابعد عن السرير",
       "category": "anti_addiction",
       "intensity": "high",
-      "time": ["any"],
+      "time": [
+        "any"
+      ],
       "cooldown": 6,
       "requires_tools": false,
       "goal": "Break loop",
       "success_condition": "الخروج من المكان",
       "guidance": "قوم فورًا من السرير",
-      "variations": ["غير مكانك", "امشِ فورًا", "اقف"]
+      "variations": [
+        "غير مكانك",
+        "امشِ فورًا",
+        "اقف"
+      ],
+      "duration": 300
     },
     {
       "id": "a10",
       "action": "امسك حاجة بإيدك",
       "category": "anti_addiction",
       "intensity": "low",
-      "time": ["any"],
+      "time": [
+        "any"
+      ],
       "cooldown": 6,
       "requires_tools": true,
       "goal": "Replace habit",
       "success_condition": "تشتيت المسار",
       "guidance": "بدّل السلوك فورًا",
-      "variations": ["كتاب", "كرة ضغط", "مياه"]
+      "variations": [
+        "كتاب",
+        "كرة ضغط",
+        "مياه"
+      ],
+      "duration": 300
     },
     {
       "id": "a11",
       "action": "ضغط",
       "category": "fitness",
       "intensity": "medium",
-      "time": ["any"],
+      "time": [
+        "any"
+      ],
       "cooldown": 72,
       "requires_tools": false,
       "goal": "Discipline",
       "success_condition": "10–20 عدة",
       "guidance": "اعمل ضغط ببطء",
-      "variations": ["10 عدة", "3 مجموعات", "حتى الفشل"]
+      "variations": [
+        "10 عدة",
+        "3 مجموعات",
+        "حتى الفشل"
+      ],
+      "duration": 300
     },
     {
       "id": "a12",
       "action": "سكوات",
       "category": "fitness",
       "intensity": "medium",
-      "time": ["any"],
+      "time": [
+        "any"
+      ],
       "cooldown": 72,
       "requires_tools": false,
       "goal": "Discipline",
       "success_condition": "15–25 عدة",
       "guidance": "انزل واطلع ببطء",
-      "variations": ["15 عدة", "3 مجموعات", "وزن الجسم"]
+      "variations": [
+        "15 عدة",
+        "3 مجموعات",
+        "وزن الجسم"
+      ],
+      "duration": 300
     },
     {
       "id": "a13",
       "action": "بلانك",
       "category": "fitness",
       "intensity": "high",
-      "time": ["any"],
+      "time": [
+        "any"
+      ],
       "cooldown": 72,
       "requires_tools": false,
       "goal": "Focus",
       "success_condition": "30–60 ثانية",
       "guidance": "اثبت جسمك",
-      "variations": ["30 ثانية", "1 دقيقة", "2 جولات"]
+      "variations": [
+        "30 ثانية",
+        "1 دقيقة",
+        "2 جولات"
+      ],
+      "duration": 300
     },
     {
       "id": "a14",
       "action": "صلي",
       "category": "spiritual",
       "intensity": "medium",
-      "time": ["any"],
+      "time": [
+        "any"
+      ],
       "cooldown": 0,
       "requires_tools": false,
       "goal": "Stability",
       "success_condition": "صلاة كاملة",
       "guidance": "قم للصلاة فورًا",
-      "variations": ["ركعتين", "خشوع كامل", "في وقتها"]
+      "variations": [
+        "ركعتين",
+        "خشوع كامل",
+        "في وقتها"
+      ],
+      "duration": 300
     },
     {
       "id": "a15",
       "action": "اقرأ قرآن",
       "category": "spiritual",
       "intensity": "low",
-      "time": ["any"],
+      "time": [
+        "any"
+      ],
       "cooldown": 0,
       "requires_tools": false,
       "goal": "Focus",
       "success_condition": "صفحة أو أكثر",
       "guidance": "ابدأ فورًا",
-      "variations": ["صفحة", "10 آيات", "سورة قصيرة"]
+      "variations": [
+        "صفحة",
+        "10 آيات",
+        "سورة قصيرة"
+      ],
+      "duration": 300
     },
     {
       "id": "a16",
       "action": "استغفر",
       "category": "spiritual",
       "intensity": "low",
-      "time": ["any"],
+      "time": [
+        "any"
+      ],
       "cooldown": 0,
       "requires_tools": false,
       "goal": "Reset",
       "success_condition": "1–5 دقائق",
       "guidance": "كرر الاستغفار",
-      "variations": ["100 مرة", "بهدوء", "قبل النوم"]
+      "variations": [
+        "100 مرة",
+        "بهدوء",
+        "قبل النوم"
+      ],
+      "duration": 60
     },
     {
       "id": "a17",
       "action": "اكتب فكرة",
       "category": "mind",
       "intensity": "low",
-      "time": ["any"],
+      "time": [
+        "any"
+      ],
       "cooldown": 72,
       "requires_tools": false,
       "goal": "Reset",
       "success_condition": "3 أفكار مكتوبة",
       "guidance": "اكتب بدون تفكير زائد",
-      "variations": ["3 أفكار", "تفريغ ذهني", "قائمة قصيرة"]
+      "variations": [
+        "3 أفكار",
+        "تفريغ ذهني",
+        "قائمة قصيرة"
+      ],
+      "duration": 300
     },
     {
       "id": "a18",
       "action": "اقرأ",
       "category": "mind",
       "intensity": "low",
-      "time": ["any"],
+      "time": [
+        "any"
+      ],
       "cooldown": 72,
       "requires_tools": true,
       "goal": "Focus",
       "success_condition": "5 صفحات",
       "guidance": "اقرأ بدون مشتتات",
-      "variations": ["5 صفحات", "10 دقائق", "مقال واحد"]
+      "variations": [
+        "5 صفحات",
+        "10 دقائق",
+        "مقال واحد"
+      ],
+      "duration": 300
     },
     {
       "id": "a19",
       "action": "خطط يومك",
       "category": "mind",
       "intensity": "low",
-      "time": ["morning"],
+      "time": [
+        "morning"
+      ],
       "cooldown": 72,
       "requires_tools": false,
       "goal": "Discipline",
       "success_condition": "قائمة 3 مهام",
       "guidance": "حدد أهم 3 مهام فقط",
-      "variations": ["3 مهام", "ترتيب الأولويات", "خطة بسيطة"]
+      "variations": [
+        "3 مهام",
+        "ترتيب الأولويات",
+        "خطة بسيطة"
+      ],
+      "duration": 300
     },
     {
       "id": "a20",
       "action": "ابدأ فورًا",
       "category": "productivity",
       "intensity": "low",
-      "time": ["any"],
+      "time": [
+        "any"
+      ],
       "cooldown": 72,
       "requires_tools": false,
       "goal": "Break loop",
       "success_condition": "بدء مهمة خلال 30 ثانية",
       "guidance": "ابدأ بدون تفكير",
-      "variations": ["افتح الشغل", "ابدأ أول خطوة", "تحرك فورًا"]
+      "variations": [
+        "افتح الشغل",
+        "ابدأ أول خطوة",
+        "تحرك فورًا"
+      ],
+      "duration": 300
     },
     {
       "id": "a21",
       "action": "نظف مكتبك",
       "category": "reset",
       "intensity": "low",
-      "time": ["any"],
+      "time": [
+        "any"
+      ],
       "cooldown": 72,
       "requires_tools": false,
       "goal": "Reset environment",
       "success_condition": "تنظيف سطح المكتب 5–10 دقائق",
       "guidance": "رتب المكان حولك فورًا",
-      "variations": ["رتب الورق", "امسح السطح", "تنظيم سريع"]
+      "variations": [
+        "رتب الورق",
+        "امسح السطح",
+        "تنظيم سريع"
+      ],
+      "duration": 300
     },
     {
       "id": "a22",
       "action": "رتب سريرك",
       "category": "reset",
       "intensity": "low",
-      "time": ["morning","any"],
+      "time": [
+        "morning",
+        "any"
+      ],
       "cooldown": 24,
       "requires_tools": false,
       "goal": "Momentum",
       "success_condition": "سرير مرتب",
       "guidance": "ابدأ فورًا بدون تأجيل",
-      "variations": ["شد الملاية", "رتب المخدة", "تنظيم كامل"]
+      "variations": [
+        "شد الملاية",
+        "رتب المخدة",
+        "تنظيم كامل"
+      ],
+      "duration": 300
     },
     {
       "id": "a23",
       "action": "افتح الشباك",
       "category": "reset",
       "intensity": "low",
-      "time": ["any"],
+      "time": [
+        "any"
+      ],
       "cooldown": 12,
       "requires_tools": false,
       "goal": "Reset air",
       "success_condition": "تهوية المكان",
       "guidance": "افتح نافذتك فورًا",
-      "variations": ["هواء 5 دقائق", "تهوية كاملة", "مع وقوف"]
+      "variations": [
+        "هواء 5 دقائق",
+        "تهوية كاملة",
+        "مع وقوف"
+      ],
+      "duration": 300
     },
     {
       "id": "a24",
       "action": "اغسل إيدك",
       "category": "reset",
       "intensity": "low",
-      "time": ["any"],
+      "time": [
+        "any"
+      ],
       "cooldown": 12,
       "requires_tools": false,
       "goal": "Reset",
       "success_condition": "تنظيف اليدين",
       "guidance": "اغسل يديك فورًا",
-      "variations": ["ماء بارد", "صابون", "غسل 30 ثانية"]
+      "variations": [
+        "ماء بارد",
+        "صابون",
+        "غسل 30 ثانية"
+      ],
+      "duration": 300
     },
     {
       "id": "a25",
       "action": "اشرب ماء وامشِ",
       "category": "reset",
       "intensity": "low",
-      "time": ["any"],
+      "time": [
+        "any"
+      ],
       "cooldown": 12,
       "requires_tools": false,
       "goal": "Reset loop",
       "success_condition": "دمج حركة + ماء",
       "guidance": "اشرب ثم تحرك فورًا",
-      "variations": ["اشرب ثم امشِ", "اشرب واطلع", "اشرب وقف"]
+      "variations": [
+        "اشرب ثم امشِ",
+        "اشرب واطلع",
+        "اشرب وقف"
+      ],
+      "duration": 300
     },
-
     {
       "id": "a26",
       "action": "تمرين تنفس",
       "category": "reset",
       "intensity": "low",
-      "time": ["any"],
+      "time": [
+        "any"
+      ],
       "cooldown": 6,
       "requires_tools": false,
       "goal": "Calm",
       "success_condition": "2–3 دقائق تنفس",
       "guidance": "تنفس ببطء",
-      "variations": ["4-4-4", "تنفس عميق", "هدوء كامل"]
+      "variations": [
+        "4-4-4",
+        "تنفس عميق",
+        "هدوء كامل"
+      ],
+      "duration": 120
     },
     {
       "id": "a27",
       "action": "اكتب 3 أفكار",
       "category": "mind",
       "intensity": "low",
-      "time": ["any"],
+      "time": [
+        "any"
+      ],
       "cooldown": 72,
       "requires_tools": false,
       "goal": "Clarity",
       "success_condition": "تفريغ ذهني",
       "guidance": "اكتب بسرعة بدون تفكير",
-      "variations": ["أفكار اليوم", "مخاوف", "أهداف"]
+      "variations": [
+        "أفكار اليوم",
+        "مخاوف",
+        "أهداف"
+      ],
+      "duration": 300
     },
     {
       "id": "a28",
       "action": "حل سؤالين",
       "category": "mind",
       "intensity": "medium",
-      "time": ["any"],
+      "time": [
+        "any"
+      ],
       "cooldown": 72,
       "requires_tools": true,
       "goal": "Focus",
       "success_condition": "حل بسيط",
       "guidance": "ابدأ بسؤالين فقط",
-      "variations": ["سؤالين رياضة", "سؤالين مادة", "مراجعة"]
+      "variations": [
+        "سؤالين رياضة",
+        "سؤالين مادة",
+        "مراجعة"
+      ],
+      "duration": 300
     },
     {
       "id": "a29",
       "action": "اقرأ صفحة",
       "category": "mind",
       "intensity": "low",
-      "time": ["any"],
+      "time": [
+        "any"
+      ],
       "cooldown": 72,
       "requires_tools": true,
       "goal": "Focus",
       "success_condition": "صفحة واحدة",
       "guidance": "اقرأ بدون مشتتات",
-      "variations": ["صفحة كتاب", "مقال قصير", "ملخص"]
+      "variations": [
+        "صفحة كتاب",
+        "مقال قصير",
+        "ملخص"
+      ],
+      "duration": 300
     },
     {
       "id": "a30",
       "action": "افتح مهمة واحدة",
       "category": "productivity",
       "intensity": "low",
-      "time": ["any"],
+      "time": [
+        "any"
+      ],
       "cooldown": 72,
       "requires_tools": false,
       "goal": "Start",
       "success_condition": "فتح ملف العمل",
       "guidance": "افتح المهمة فقط",
-      "variations": ["افتح ملف", "ابدأ أول خطوة", "شغل البرنامج"]
+      "variations": [
+        "افتح ملف",
+        "ابدأ أول خطوة",
+        "شغل البرنامج"
+      ],
+      "duration": 300
     },
-
     {
       "id": "a31",
       "action": "اشتغل 10 دقائق",
       "category": "productivity",
       "intensity": "medium",
-      "time": ["any"],
+      "time": [
+        "any"
+      ],
       "cooldown": 72,
       "requires_tools": false,
       "goal": "Momentum",
       "success_condition": "10 دقائق عمل",
       "guidance": "ابدأ بدون تفكير",
-      "variations": ["Pomodoro قصير", "10 دقائق تركيز", "بدون مشتتات"]
+      "variations": [
+        "Pomodoro قصير",
+        "10 دقائق تركيز",
+        "بدون مشتتات"
+      ],
+      "duration": 600
     },
     {
       "id": "a32",
       "action": "نظم ملفاتك",
       "category": "productivity",
       "intensity": "low",
-      "time": ["any"],
+      "time": [
+        "any"
+      ],
       "cooldown": 72,
       "requires_tools": false,
       "goal": "Order",
       "success_condition": "تنظيم بسيط",
       "guidance": "رتب ملفاتك",
-      "variations": ["حذف ملفات", "ترتيب مجلد", "تنظيم سطح المكتب"]
+      "variations": [
+        "حذف ملفات",
+        "ترتيب مجلد",
+        "تنظيم سطح المكتب"
+      ],
+      "duration": 300
     },
-
     {
       "id": "a33",
       "action": "سكوات سريع",
       "category": "fitness",
       "intensity": "medium",
-      "time": ["any"],
+      "time": [
+        "any"
+      ],
       "cooldown": 72,
       "requires_tools": false,
       "goal": "Energy",
       "success_condition": "15 عدة",
       "guidance": "انزل بسرعة متوسطة",
-      "variations": ["15 عدة", "20 عدة", "3 مجموعات"]
+      "variations": [
+        "15 عدة",
+        "20 عدة",
+        "3 مجموعات"
+      ],
+      "duration": 300
     },
     {
       "id": "a34",
       "action": "ضغط سريع",
       "category": "fitness",
       "intensity": "medium",
-      "time": ["any"],
+      "time": [
+        "any"
+      ],
       "cooldown": 72,
       "requires_tools": false,
       "goal": "Energy",
       "success_condition": "10–15 عدة",
       "guidance": "بسرعة متوسطة",
-      "variations": ["على الأرض", "على الحائط", "3 مجموعات"]
+      "variations": [
+        "على الأرض",
+        "على الحائط",
+        "3 مجموعات"
+      ],
+      "duration": 300
     },
     {
       "id": "a35",
       "action": "بلانك 30 ثانية",
       "category": "fitness",
       "intensity": "high",
-      "time": ["any"],
+      "time": [
+        "any"
+      ],
       "cooldown": 72,
       "requires_tools": false,
       "goal": "Focus",
       "success_condition": "ثبات",
       "guidance": "اثبت جسمك",
-      "variations": ["30 ثانية", "45 ثانية", "جولتين"]
+      "variations": [
+        "30 ثانية",
+        "45 ثانية",
+        "جولتين"
+      ],
+      "duration": 300
     },
-
     {
       "id": "a36",
       "action": "اذكر الله",
       "category": "spiritual",
       "intensity": "low",
-      "time": ["any"],
+      "time": [
+        "any"
+      ],
       "cooldown": 0,
       "requires_tools": false,
       "goal": "Calm",
       "success_condition": "2–5 دقائق",
       "guidance": "كرر الذكر بهدوء",
-      "variations": ["استغفار", "تسبيح", "تهليل"]
+      "variations": [
+        "استغفار",
+        "تسبيح",
+        "تهليل"
+      ],
+      "duration": 120
     },
     {
       "id": "a37",
       "action": "ادعُ",
       "category": "spiritual",
       "intensity": "low",
-      "time": ["any"],
+      "time": [
+        "any"
+      ],
       "cooldown": 0,
       "requires_tools": false,
       "goal": "Stability",
       "success_condition": "دعاء بسيط",
       "guidance": "ادعُ بصدق",
-      "variations": ["دعاء قصير", "طلب هدوء", "شكر"]
+      "variations": [
+        "دعاء قصير",
+        "طلب هدوء",
+        "شكر"
+      ],
+      "duration": 300
     },
-
     {
       "id": "a38",
       "action": "اكتب هدف واحد",
       "category": "mind",
       "intensity": "low",
-      "time": ["morning"],
+      "time": [
+        "morning"
+      ],
       "cooldown": 72,
       "requires_tools": false,
       "goal": "Focus",
       "success_condition": "هدف واحد واضح",
       "guidance": "حدد هدفك فقط",
-      "variations": ["هدف اليوم", "هدف الأسبوع", "هدف بسيط"]
+      "variations": [
+        "هدف اليوم",
+        "هدف الأسبوع",
+        "هدف بسيط"
+      ],
+      "duration": 300
     },
     {
       "id": "a39",
       "action": "ابدأ فورًا",
       "category": "productivity",
       "intensity": "high",
-      "time": ["any"],
+      "time": [
+        "any"
+      ],
       "cooldown": 72,
       "requires_tools": false,
       "goal": "Break resistance",
       "success_condition": "بدء خلال 10 ثواني",
       "guidance": "تحرك بدون تفكير",
-      "variations": ["ابدأ الملف", "افتح المهمة", "تحرك الآن"]
+      "variations": [
+        "ابدأ الملف",
+        "افتح المهمة",
+        "تحرك الآن"
+      ],
+      "duration": 300
     },
     {
       "id": "a40",
       "action": "غيّر مكانك",
       "category": "anti_addiction",
       "intensity": "high",
-      "time": ["any"],
+      "time": [
+        "any"
+      ],
       "cooldown": 6,
       "requires_tools": false,
       "goal": "Break loop",
       "success_condition": "تغيير البيئة",
       "guidance": "قوم فورًا وغير مكانك",
-      "variations": ["غرفة أخرى", "خارج الغرفة", "مكان مفتوح"]
+      "variations": [
+        "غرفة أخرى",
+        "خارج الغرفة",
+        "مكان مفتوح"
+      ],
+      "duration": 300
     },
     {
       "id": "a41",
       "action": "افتح نافذة",
       "category": "reset",
       "intensity": "low",
-      "time": ["any"],
+      "time": [
+        "any"
+      ],
       "cooldown": 12,
       "requires_tools": false,
       "goal": "Reset environment",
       "success_condition": "تهوية 2–5 دقائق",
       "guidance": "افتح النافذة فورًا",
-      "variations": ["تهوية الغرفة", "هواء بارد", "فتح كامل"]
+      "variations": [
+        "تهوية الغرفة",
+        "هواء بارد",
+        "فتح كامل"
+      ],
+      "duration": 120
     },
     {
       "id": "a42",
       "action": "اقعد بدون موبايل",
       "category": "anti_addiction",
       "intensity": "high",
-      "time": ["any"],
+      "time": [
+        "any"
+      ],
       "cooldown": 6,
       "requires_tools": false,
       "goal": "Detox",
       "success_condition": "5–10 دقائق بدون هاتف",
       "guidance": "اجلس بدون أي شاشة",
-      "variations": ["هدوء", "تنفس", "مراقبة التفكير"]
+      "variations": [
+        "هدوء",
+        "تنفس",
+        "مراقبة التفكير"
+      ],
+      "duration": 300
     },
     {
       "id": "a43",
       "action": "عدّل وضع جسمك",
       "category": "reset",
       "intensity": "low",
-      "time": ["any"],
+      "time": [
+        "any"
+      ],
       "cooldown": 12,
       "requires_tools": false,
       "goal": "Awareness",
       "success_condition": "تحسين الوقفة",
       "guidance": "اقف أو اجلس بشكل صحيح",
-      "variations": ["استقامة الظهر", "إرخاء الكتفين", "توازن"]
+      "variations": [
+        "استقامة الظهر",
+        "إرخاء الكتفين",
+        "توازن"
+      ],
+      "duration": 300
     },
     {
       "id": "a44",
       "action": "امسك كتاب",
       "category": "mind",
       "intensity": "low",
-      "time": ["any"],
+      "time": [
+        "any"
+      ],
       "cooldown": 72,
       "requires_tools": true,
       "goal": "Focus",
       "success_condition": "فتح كتاب",
       "guidance": "افتح أي كتاب وابدأ",
-      "variations": ["صفحة واحدة", "10 دقائق قراءة", "تلخيص"]
+      "variations": [
+        "صفحة واحدة",
+        "10 دقائق قراءة",
+        "تلخيص"
+      ],
+      "duration": 300
     },
     {
       "id": "a45",
       "action": "حل مسألة واحدة",
       "category": "mind",
       "intensity": "medium",
-      "time": ["any"],
+      "time": [
+        "any"
+      ],
       "cooldown": 72,
       "requires_tools": true,
       "goal": "Focus",
       "success_condition": "حل كامل",
       "guidance": "حل مسألة واحدة فقط",
-      "variations": ["رياضيات", "برمجة", "منطق"]
+      "variations": [
+        "رياضيات",
+        "برمجة",
+        "منطق"
+      ],
+      "duration": 300
     },
-
     {
       "id": "a46",
       "action": "اكتب سطرين",
       "category": "mind",
       "intensity": "low",
-      "time": ["any"],
+      "time": [
+        "any"
+      ],
       "cooldown": 72,
       "requires_tools": false,
       "goal": "Expression",
       "success_condition": "سطرين مكتوبين",
       "guidance": "اكتب بدون تفكير زائد",
-      "variations": ["فكرة", "مشاعر", "خطة"]
+      "variations": [
+        "فكرة",
+        "مشاعر",
+        "خطة"
+      ],
+      "duration": 300
     },
     {
       "id": "a47",
       "action": "راجع هدفك",
       "category": "mind",
       "intensity": "low",
-      "time": ["morning"],
+      "time": [
+        "morning"
+      ],
       "cooldown": 72,
       "requires_tools": false,
       "goal": "Clarity",
       "success_condition": "تذكير بالهدف",
       "guidance": "اقرأ هدفك الحالي",
-      "variations": ["هدف اليوم", "هدف الشهر", "إعادة ضبط"]
+      "variations": [
+        "هدف اليوم",
+        "هدف الشهر",
+        "إعادة ضبط"
+      ],
+      "duration": 300
     },
     {
       "id": "a48",
       "action": "ابدأ مهمة صغيرة",
       "category": "productivity",
       "intensity": "low",
-      "time": ["any"],
+      "time": [
+        "any"
+      ],
       "cooldown": 72,
       "requires_tools": false,
       "goal": "Start",
       "success_condition": "خطوة واحدة",
       "guidance": "ابدأ أصغر خطوة",
-      "variations": ["فتح ملف", "كتابة عنوان", "تنظيم"]
+      "variations": [
+        "فتح ملف",
+        "كتابة عنوان",
+        "تنظيم"
+      ],
+      "duration": 300
     },
     {
       "id": "a49",
       "action": "اشتغل 5 دقائق",
       "category": "productivity",
       "intensity": "medium",
-      "time": ["any"],
+      "time": [
+        "any"
+      ],
       "cooldown": 72,
       "requires_tools": false,
       "goal": "Momentum",
       "success_condition": "5 دقائق تركيز",
       "guidance": "ابدأ فورًا",
-      "variations": ["Pomodoro قصير", "بدون مشتتات", "مؤقت"]
+      "variations": [
+        "Pomodoro قصير",
+        "بدون مشتتات",
+        "مؤقت"
+      ],
+      "duration": 300
     },
     {
       "id": "a50",
       "action": "نظف مكانك",
       "category": "reset",
       "intensity": "low",
-      "time": ["any"],
+      "time": [
+        "any"
+      ],
       "cooldown": 24,
       "requires_tools": false,
       "goal": "Order",
       "success_condition": "تنظيف 5 دقائق",
       "guidance": "رتب بسرعة",
-      "variations": ["سطح المكتب", "الغرفة", "الأرض"]
+      "variations": [
+        "سطح المكتب",
+        "الغرفة",
+        "الأرض"
+      ],
+      "duration": 300
     },
-
     {
       "id": "a51",
       "action": "تحرك فورًا",
       "category": "anti_addiction",
       "intensity": "high",
-      "time": ["any"],
+      "time": [
+        "any"
+      ],
       "cooldown": 6,
       "requires_tools": false,
       "goal": "Interrupt loop",
       "success_condition": "كسر التوقف",
       "guidance": "انهض الآن",
-      "variations": ["قف", "امشِ", "غير مكانك"]
+      "variations": [
+        "قف",
+        "امشِ",
+        "غير مكانك"
+      ],
+      "duration": 300
     },
     {
       "id": "a52",
       "action": "اشرب ماء واغسل وجهك",
       "category": "reset",
       "intensity": "low",
-      "time": ["any"],
+      "time": [
+        "any"
+      ],
       "cooldown": 12,
       "requires_tools": false,
       "goal": "Reset",
       "success_condition": "تنشيط كامل",
       "guidance": "اعمل الاثنين فورًا",
-      "variations": ["ماء بارد", "تنشيط سريع", "Reset"]
+      "variations": [
+        "ماء بارد",
+        "تنشيط سريع",
+        "Reset"
+      ],
+      "duration": 300
     },
     {
       "id": "a53",
       "action": "اقرأ 3 دقائق",
       "category": "mind",
       "intensity": "low",
-      "time": ["any"],
+      "time": [
+        "any"
+      ],
       "cooldown": 72,
       "requires_tools": true,
       "goal": "Focus",
       "success_condition": "3 دقائق قراءة",
       "guidance": "ابدأ فورًا",
-      "variations": ["كتاب", "مقال", "ملخص"]
+      "variations": [
+        "كتاب",
+        "مقال",
+        "ملخص"
+      ],
+      "duration": 180
     },
     {
       "id": "a54",
       "action": "حل تمرين واحد",
       "category": "mind",
       "intensity": "medium",
-      "time": ["any"],
+      "time": [
+        "any"
+      ],
       "cooldown": 72,
       "requires_tools": true,
       "goal": "Progress",
       "success_condition": "تمرين واحد",
       "guidance": "ركز على تمرين واحد فقط",
-      "variations": ["رياضيات", "برمجة", "فيزياء"]
+      "variations": [
+        "رياضيات",
+        "برمجة",
+        "فيزياء"
+      ],
+      "duration": 300
     },
     {
       "id": "a55",
       "action": "رتب أفكارك",
       "category": "mind",
       "intensity": "low",
-      "time": ["any"],
+      "time": [
+        "any"
+      ],
       "cooldown": 72,
       "requires_tools": false,
       "goal": "Clarity",
       "success_condition": "3 نقاط واضحة",
       "guidance": "اكتب بشكل بسيط",
-      "variations": ["أولويات", "مشاكل", "حلول"]
+      "variations": [
+        "أولويات",
+        "مشاكل",
+        "حلول"
+      ],
+      "duration": 300
     },
-
     {
       "id": "a56",
       "action": "تمدد سريع",
       "category": "reset",
       "intensity": "low",
-      "time": ["any"],
+      "time": [
+        "any"
+      ],
       "cooldown": 12,
       "requires_tools": false,
       "goal": "Relax",
       "success_condition": "2–3 دقائق",
       "guidance": "مد جسمك",
-      "variations": ["ظهر", "رقبة", "أرجل"]
+      "variations": [
+        "ظهر",
+        "رقبة",
+        "أرجل"
+      ],
+      "duration": 120
     },
     {
       "id": "a57",
       "action": "اذكر 50 مرة",
       "category": "spiritual",
       "intensity": "low",
-      "time": ["any"],
+      "time": [
+        "any"
+      ],
       "cooldown": 0,
       "requires_tools": false,
       "goal": "Calm",
       "success_condition": "50 ذكر",
       "guidance": "كرر بهدوء",
-      "variations": ["استغفار", "تسبيح", "تهليل"]
+      "variations": [
+        "استغفار",
+        "تسبيح",
+        "تهليل"
+      ],
+      "duration": 300
     },
     {
       "id": "a58",
       "action": "ادعُ لنفسك",
       "category": "spiritual",
       "intensity": "low",
-      "time": ["any"],
+      "time": [
+        "any"
+      ],
       "cooldown": 0,
       "requires_tools": false,
       "goal": "Stability",
       "success_condition": "دعاء صادق",
       "guidance": "ادعُ الآن",
-      "variations": ["هدوء", "شكر", "طلب قوة"]
+      "variations": [
+        "هدوء",
+        "شكر",
+        "طلب قوة"
+      ],
+      "duration": 300
     },
     {
       "id": "a59",
       "action": "ابدأ أي شيء",
       "category": "productivity",
       "intensity": "high",
-      "time": ["any"],
+      "time": [
+        "any"
+      ],
       "cooldown": 72,
       "requires_tools": false,
       "goal": "Break resistance",
       "success_condition": "بدء فوري",
       "guidance": "ابدأ فورًا بدون تفكير",
-      "variations": ["أي مهمة", "أي خطوة", "أي عمل"]
+      "variations": [
+        "أي مهمة",
+        "أي خطوة",
+        "أي عمل"
+      ],
+      "duration": 300
     },
     {
       "id": "a60",
       "action": "غيّر وضعك",
       "category": "anti_addiction",
       "intensity": "high",
-      "time": ["any"],
+      "time": [
+        "any"
+      ],
       "cooldown": 6,
       "requires_tools": false,
       "goal": "Reset state",
       "success_condition": "تغيير فوري",
       "guidance": "غير وضعك الآن",
-      "variations": ["قف", "امشِ", "اخرج"]
+      "variations": [
+        "قف",
+        "امشِ",
+        "اخرج"
+      ],
+      "duration": 300
     },
     {
       "id": "a61",
       "action": "اقرأ صفحة واحدة",
       "category": "mind",
       "intensity": "low",
-      "time": ["any"],
+      "time": [
+        "any"
+      ],
       "cooldown": 72,
       "requires_tools": true,
       "goal": "Focus",
       "success_condition": "صفحة واحدة فقط",
       "guidance": "اقرأ بدون مشتتات",
-      "variations": ["صفحة كتاب", "مقال قصير", "ملخص درس"]
+      "variations": [
+        "صفحة كتاب",
+        "مقال قصير",
+        "ملخص درس"
+      ],
+      "duration": 300
     },
     {
       "id": "a62",
       "action": "حل سؤال واحد",
       "category": "mind",
       "intensity": "medium",
-      "time": ["any"],
+      "time": [
+        "any"
+      ],
       "cooldown": 72,
       "requires_tools": true,
       "goal": "Progress",
       "success_condition": "سؤال واحد محلول",
       "guidance": "ابدأ بسؤال واحد فقط",
-      "variations": ["رياضيات", "برمجة", "فيزياء"]
+      "variations": [
+        "رياضيات",
+        "برمجة",
+        "فيزياء"
+      ],
+      "duration": 300
     },
     {
       "id": "a63",
       "action": "اكتب ملخص",
       "category": "mind",
       "intensity": "medium",
-      "time": ["any"],
+      "time": [
+        "any"
+      ],
       "cooldown": 72,
       "requires_tools": false,
       "goal": "Retention",
       "success_condition": "3–5 أسطر",
       "guidance": "لخص بسرعة",
-      "variations": ["درس اليوم", "فكرة", "معلومة"]
+      "variations": [
+        "درس اليوم",
+        "فكرة",
+        "معلومة"
+      ],
+      "duration": 300
     },
     {
       "id": "a64",
       "action": "راجع درس",
       "category": "mind",
       "intensity": "medium",
-      "time": ["any"],
+      "time": [
+        "any"
+      ],
       "cooldown": 72,
       "requires_tools": true,
       "goal": "Learning",
       "success_condition": "10 دقائق مراجعة",
       "guidance": "راجع جزء واحد فقط",
-      "variations": ["نقطة واحدة", "صفحة", "ملخص"]
+      "variations": [
+        "نقطة واحدة",
+        "صفحة",
+        "ملخص"
+      ],
+      "duration": 600
     },
     {
       "id": "a65",
       "action": "افتح كتاب",
       "category": "mind",
       "intensity": "low",
-      "time": ["any"],
+      "time": [
+        "any"
+      ],
       "cooldown": 72,
       "requires_tools": true,
       "goal": "Start",
       "success_condition": "فتح الكتاب",
       "guidance": "افتح فقط بدون ضغط",
-      "variations": ["كتاب دراسة", "رواية", "مقال"]
+      "variations": [
+        "كتاب دراسة",
+        "رواية",
+        "مقال"
+      ],
+      "duration": 300
     },
-
     {
       "id": "a66",
       "action": "اكتب فكرة مشروع",
       "category": "mind",
       "intensity": "low",
-      "time": ["any"],
+      "time": [
+        "any"
+      ],
       "cooldown": 72,
       "requires_tools": false,
       "goal": "Creativity",
       "success_condition": "فكرة واحدة مكتوبة",
       "guidance": "اكتب أي فكرة",
-      "variations": ["تطبيق", "حل مشكلة", "تحسين عادة"]
+      "variations": [
+        "تطبيق",
+        "حل مشكلة",
+        "تحسين عادة"
+      ],
+      "duration": 300
     },
     {
       "id": "a67",
       "action": "اشتغل 10 دقائق",
       "category": "productivity",
       "intensity": "medium",
-      "time": ["any"],
+      "time": [
+        "any"
+      ],
       "cooldown": 72,
       "requires_tools": false,
       "goal": "Momentum",
       "success_condition": "10 دقائق تركيز",
       "guidance": "ابدأ فورًا",
-      "variations": ["Pomodoro", "بدون هاتف", "تركيز كامل"]
+      "variations": [
+        "Pomodoro",
+        "بدون هاتف",
+        "تركيز كامل"
+      ],
+      "duration": 600
     },
     {
       "id": "a68",
       "action": "افتح مشروعك",
       "category": "productivity",
       "intensity": "low",
-      "time": ["any"],
+      "time": [
+        "any"
+      ],
       "cooldown": 72,
       "requires_tools": false,
       "goal": "Start",
       "success_condition": "فتح المشروع",
       "guidance": "افتح الملف فقط",
-      "variations": ["كود", "تصميم", "كتابة"]
+      "variations": [
+        "كود",
+        "تصميم",
+        "كتابة"
+      ],
+      "duration": 300
     },
     {
       "id": "a69",
       "action": "نظم خطوة واحدة",
       "category": "productivity",
       "intensity": "low",
-      "time": ["any"],
+      "time": [
+        "any"
+      ],
       "cooldown": 72,
       "requires_tools": false,
       "goal": "Order",
       "success_condition": "تحسين بسيط",
       "guidance": "اعمل خطوة واحدة",
-      "variations": ["ملف", "جدول", "قائمة"]
+      "variations": [
+        "ملف",
+        "جدول",
+        "قائمة"
+      ],
+      "duration": 300
     },
     {
       "id": "a70",
       "action": "ابدأ مهمة صعبة",
       "category": "productivity",
       "intensity": "high",
-      "time": ["any"],
+      "time": [
+        "any"
+      ],
       "cooldown": 72,
       "requires_tools": false,
       "goal": "Discipline",
       "success_condition": "بدء أول خطوة",
       "guidance": "ابدأ بدون تفكير",
-      "variations": ["مشروع", "مذاكرة", "عمل"]
+      "variations": [
+        "مشروع",
+        "مذاكرة",
+        "عمل"
+      ],
+      "duration": 300
     },
-
     {
       "id": "a71",
       "action": "ضغط ببطء",
       "category": "fitness",
       "intensity": "medium",
-      "time": ["any"],
+      "time": [
+        "any"
+      ],
       "cooldown": 72,
       "requires_tools": false,
       "goal": "Control",
       "success_condition": "8–12 عدة",
       "guidance": "ببطء شديد",
-      "variations": ["3 مجموعات", "حتى الفشل", "متحكم"]
+      "variations": [
+        "3 مجموعات",
+        "حتى الفشل",
+        "متحكم"
+      ],
+      "duration": 300
     },
     {
       "id": "a72",
       "action": "سكوات عميق",
       "category": "fitness",
       "intensity": "high",
-      "time": ["any"],
+      "time": [
+        "any"
+      ],
       "cooldown": 72,
       "requires_tools": false,
       "goal": "Strength",
       "success_condition": "12–20 عدة",
       "guidance": "نزول كامل",
-      "variations": ["بطيء", "سريع", "ثابت"]
+      "variations": [
+        "بطيء",
+        "سريع",
+        "ثابت"
+      ],
+      "duration": 300
     },
     {
       "id": "a73",
       "action": "بلانك طويل",
       "category": "fitness",
       "intensity": "high",
-      "time": ["any"],
+      "time": [
+        "any"
+      ],
       "cooldown": 72,
       "requires_tools": false,
       "goal": "Endurance",
       "success_condition": "60–90 ثانية",
       "guidance": "اثبت جسمك",
-      "variations": ["1 دقيقة", "90 ثانية", "جولتين"]
+      "variations": [
+        "1 دقيقة",
+        "90 ثانية",
+        "جولتين"
+      ],
+      "duration": 300
     },
     {
       "id": "a74",
       "action": "تمرين كامل الجسم",
       "category": "fitness",
       "intensity": "high",
-      "time": ["any"],
+      "time": [
+        "any"
+      ],
       "cooldown": 72,
       "requires_tools": false,
       "goal": "Energy",
       "success_condition": "15 دقيقة",
       "guidance": "تمرين متكامل",
-      "variations": ["ضغط + سكوات", "كارديو", "مختلط"]
+      "variations": [
+        "ضغط + سكوات",
+        "كارديو",
+        "مختلط"
+      ],
+      "duration": 900
     },
-
     {
       "id": "a75",
       "action": "اشرب ماء وانهض",
       "category": "reset",
       "intensity": "low",
-      "time": ["any"],
+      "time": [
+        "any"
+      ],
       "cooldown": 12,
       "requires_tools": false,
       "goal": "Reset",
       "success_condition": "حركة فورية",
       "guidance": "اشرب ثم قوم فورًا",
-      "variations": ["تحرك", "امشِ", "غير مكانك"]
+      "variations": [
+        "تحرك",
+        "امشِ",
+        "غير مكانك"
+      ],
+      "duration": 300
     },
     {
       "id": "a76",
       "action": "اقفل الإشعارات",
       "category": "anti_addiction",
       "intensity": "high",
-      "time": ["any"],
+      "time": [
+        "any"
+      ],
       "cooldown": 6,
       "requires_tools": false,
       "goal": "Focus protection",
       "success_condition": "إيقاف مشتتات",
       "guidance": "اقفل كل الإشعارات",
-      "variations": ["وضع صامت", "عدم الإزعاج", "إغلاق كامل"]
+      "variations": [
+        "وضع صامت",
+        "عدم الإزعاج",
+        "إغلاق كامل"
+      ],
+      "duration": 300
     },
     {
       "id": "a77",
       "action": "ابعد الموبايل",
       "category": "anti_addiction",
       "intensity": "high",
-      "time": ["any"],
+      "time": [
+        "any"
+      ],
       "cooldown": 6,
       "requires_tools": false,
       "goal": "Break loop",
       "success_condition": "إبعاد الجهاز",
       "guidance": "ضعه بعيدًا فورًا",
-      "variations": ["غرفة أخرى", "درج", "بعيد عن اليد"]
+      "variations": [
+        "غرفة أخرى",
+        "درج",
+        "بعيد عن اليد"
+      ],
+      "duration": 300
     },
     {
       "id": "a78",
       "action": "غيّر وضع الجلوس",
       "category": "reset",
       "intensity": "low",
-      "time": ["any"],
+      "time": [
+        "any"
+      ],
       "cooldown": 12,
       "requires_tools": false,
       "goal": "Awareness",
       "success_condition": "تغيير الوضع",
       "guidance": "غيّر وضعك الآن",
-      "variations": ["قف", "اجلس مستقيم", "تحرك"]
+      "variations": [
+        "قف",
+        "اجلس مستقيم",
+        "تحرك"
+      ],
+      "duration": 300
     },
     {
       "id": "a79",
       "action": "تنفس بعمق",
       "category": "reset",
       "intensity": "low",
-      "time": ["any"],
+      "time": [
+        "any"
+      ],
       "cooldown": 6,
       "requires_tools": false,
       "goal": "Calm",
       "success_condition": "2–3 دقائق",
       "guidance": "تنفس ببطء",
-      "variations": ["4-4-4", "تنفس عميق", "هدوء"]
+      "variations": [
+        "4-4-4",
+        "تنفس عميق",
+        "هدوء"
+      ],
+      "duration": 120
     },
     {
       "id": "a80",
       "action": "اذكر الله 100 مرة",
       "category": "spiritual",
       "intensity": "low",
-      "time": ["any"],
+      "time": [
+        "any"
+      ],
       "cooldown": 0,
       "requires_tools": false,
       "goal": "Calm",
       "success_condition": "100 ذكر",
       "guidance": "كرر بهدوء",
-      "variations": ["استغفار", "تسبيح", "تهليل"]
+      "variations": [
+        "استغفار",
+        "تسبيح",
+        "تهليل"
+      ],
+      "duration": 300
     },
     {
       "id": "a81",
       "action": "اقفل كل التطبيقات",
       "category": "anti_addiction",
       "intensity": "high",
-      "time": ["any"],
+      "time": [
+        "any"
+      ],
       "cooldown": 6,
       "requires_tools": false,
       "goal": "Digital reset",
       "success_condition": "إغلاق شامل للتطبيقات",
       "guidance": "اقفل كل شيء فورًا",
-      "variations": ["force close", "خروج كامل", "تنظيف الشاشة"]
+      "variations": [
+        "force close",
+        "خروج كامل",
+        "تنظيف الشاشة"
+      ],
+      "duration": 300
     },
     {
       "id": "a82",
       "action": "ابعد عن الشاشة",
       "category": "anti_addiction",
       "intensity": "high",
-      "time": ["any"],
+      "time": [
+        "any"
+      ],
       "cooldown": 6,
       "requires_tools": false,
       "goal": "Break loop",
       "success_condition": "ترك الجهاز",
       "guidance": "قوم فورًا وابعد",
-      "variations": ["قف", "امشِ", "غرفة أخرى"]
+      "variations": [
+        "قف",
+        "امشِ",
+        "غرفة أخرى"
+      ],
+      "duration": 300
     },
     {
       "id": "a83",
       "action": "غير الإضاءة",
       "category": "reset",
       "intensity": "low",
-      "time": ["any"],
+      "time": [
+        "any"
+      ],
       "cooldown": 12,
       "requires_tools": false,
       "goal": "Environment shift",
       "success_condition": "تغيير جو الغرفة",
       "guidance": "غيّر الإضاءة الآن",
-      "variations": ["نور طبيعي", "إضاءة خفيفة", "إطفاء"]
+      "variations": [
+        "نور طبيعي",
+        "إضاءة خفيفة",
+        "إطفاء"
+      ],
+      "duration": 300
     },
     {
       "id": "a84",
       "action": "اقرأ 10 دقائق",
       "category": "mind",
       "intensity": "medium",
-      "time": ["any"],
+      "time": [
+        "any"
+      ],
       "cooldown": 72,
       "requires_tools": true,
       "goal": "Deep focus",
       "success_condition": "10 دقائق قراءة",
       "guidance": "اقرأ بدون توقف",
-      "variations": ["كتاب", "مقال", "ملخص"]
+      "variations": [
+        "كتاب",
+        "مقال",
+        "ملخص"
+      ],
+      "duration": 600
     },
     {
       "id": "a85",
       "action": "حل تمرينين",
       "category": "mind",
       "intensity": "medium",
-      "time": ["any"],
+      "time": [
+        "any"
+      ],
       "cooldown": 72,
       "requires_tools": true,
       "goal": "Progress",
       "success_condition": "حل تمرينين",
       "guidance": "ابدأ فورًا",
-      "variations": ["رياضيات", "برمجة", "منطق"]
+      "variations": [
+        "رياضيات",
+        "برمجة",
+        "منطق"
+      ],
+      "duration": 300
     },
     {
       "id": "a86",
       "action": "اكتب خطة قصيرة",
       "category": "mind",
       "intensity": "low",
-      "time": ["morning"],
+      "time": [
+        "morning"
+      ],
       "cooldown": 72,
       "requires_tools": false,
       "goal": "Clarity",
       "success_condition": "3 نقاط",
       "guidance": "حدد خطواتك",
-      "variations": ["يوم", "أسبوع", "هدف"]
+      "variations": [
+        "يوم",
+        "أسبوع",
+        "هدف"
+      ],
+      "duration": 300
     },
     {
       "id": "a87",
       "action": "ابدأ مشروعك",
       "category": "productivity",
       "intensity": "high",
-      "time": ["any"],
+      "time": [
+        "any"
+      ],
       "cooldown": 72,
       "requires_tools": false,
       "goal": "Execution",
       "success_condition": "بدء العمل",
       "guidance": "ابدأ فورًا بدون تفكير",
-      "variations": ["كود", "تصميم", "كتابة"]
+      "variations": [
+        "كود",
+        "تصميم",
+        "كتابة"
+      ],
+      "duration": 300
     },
     {
       "id": "a88",
       "action": "اشتغل 15 دقيقة",
       "category": "productivity",
       "intensity": "high",
-      "time": ["any"],
+      "time": [
+        "any"
+      ],
       "cooldown": 72,
       "requires_tools": false,
       "goal": "Momentum",
       "success_condition": "15 دقيقة تركيز",
       "guidance": "بدون مشتتات",
-      "variations": ["Pomodoro", "مؤقت", "جلسة واحدة"]
+      "variations": [
+        "Pomodoro",
+        "مؤقت",
+        "جلسة واحدة"
+      ],
+      "duration": 900
     },
     {
       "id": "a89",
       "action": "رتب أولويتك",
       "category": "mind",
       "intensity": "low",
-      "time": ["any"],
+      "time": [
+        "any"
+      ],
       "cooldown": 72,
       "requires_tools": false,
       "goal": "Focus",
       "success_condition": "3 أولويات",
       "guidance": "حدد الأهم",
-      "variations": ["اليوم", "الأسبوع", "الآن"]
+      "variations": [
+        "اليوم",
+        "الأسبوع",
+        "الآن"
+      ],
+      "duration": 300
     },
     {
       "id": "a90",
       "action": "امشي 10 دقائق",
       "category": "movement",
       "intensity": "low",
-      "time": ["any"],
+      "time": [
+        "any"
+      ],
       "cooldown": 72,
       "requires_tools": false,
       "goal": "Reset body",
       "success_condition": "10 دقائق مشي",
       "guidance": "امشِ بدون هاتف",
-      "variations": ["خارج", "داخل", "بهدوء"]
+      "variations": [
+        "خارج",
+        "داخل",
+        "بهدوء"
+      ],
+      "duration": 600
     },
-
     {
       "id": "a91",
       "action": "سكوات 20 عدة",
       "category": "fitness",
       "intensity": "medium",
-      "time": ["any"],
+      "time": [
+        "any"
+      ],
       "cooldown": 72,
       "requires_tools": false,
       "goal": "Strength",
       "success_condition": "20 عدة",
       "guidance": "بشكل صحيح",
-      "variations": ["بطيء", "سريع", "3 مجموعات"]
+      "variations": [
+        "بطيء",
+        "سريع",
+        "3 مجموعات"
+      ],
+      "duration": 300
     },
     {
       "id": "a92",
       "action": "ضغط 15 عدة",
       "category": "fitness",
       "intensity": "medium",
-      "time": ["any"],
+      "time": [
+        "any"
+      ],
       "cooldown": 72,
       "requires_tools": false,
       "goal": "Strength",
       "success_condition": "15 عدة",
       "guidance": "تحكم كامل",
-      "variations": ["أرض", "حائط", "بطيء"]
+      "variations": [
+        "أرض",
+        "حائط",
+        "بطيء"
+      ],
+      "duration": 300
     },
     {
       "id": "a93",
       "action": "بلانك دقيقة",
       "category": "fitness",
       "intensity": "high",
-      "time": ["any"],
+      "time": [
+        "any"
+      ],
       "cooldown": 72,
       "requires_tools": false,
       "goal": "Endurance",
       "success_condition": "60 ثانية",
       "guidance": "ثبات كامل",
-      "variations": ["1 دقيقة", "90 ثانية", "جولتين"]
+      "variations": [
+        "1 دقيقة",
+        "90 ثانية",
+        "جولتين"
+      ],
+      "duration": 300
     },
     {
       "id": "a94",
       "action": "تمدد كامل الجسم",
       "category": "reset",
       "intensity": "low",
-      "time": ["any"],
+      "time": [
+        "any"
+      ],
       "cooldown": 12,
       "requires_tools": false,
       "goal": "Relax",
       "success_condition": "5 دقائق",
       "guidance": "مد كل جسمك",
-      "variations": ["ظهر", "أرجل", "رقبة"]
+      "variations": [
+        "ظهر",
+        "أرجل",
+        "رقبة"
+      ],
+      "duration": 300
     },
     {
       "id": "a95",
       "action": "تنفس ببطء 3 دقائق",
       "category": "reset",
       "intensity": "low",
-      "time": ["any"],
+      "time": [
+        "any"
+      ],
       "cooldown": 6,
       "requires_tools": false,
       "goal": "Calm",
       "success_condition": "3 دقائق",
       "guidance": "تنفس عميق",
-      "variations": ["4-4-6", "هدوء", "تركيز"]
+      "variations": [
+        "4-4-6",
+        "هدوء",
+        "تركيز"
+      ],
+      "duration": 180
     },
-
     {
       "id": "a96",
       "action": "اذكر 100 مرة",
       "category": "spiritual",
       "intensity": "low",
-      "time": ["any"],
+      "time": [
+        "any"
+      ],
       "cooldown": 0,
       "requires_tools": false,
       "goal": "Stability",
       "success_condition": "100 ذكر",
       "guidance": "كرر بهدوء",
-      "variations": ["استغفار", "تسبيح", "تهليل"]
+      "variations": [
+        "استغفار",
+        "تسبيح",
+        "تهليل"
+      ],
+      "duration": 300
     },
     {
       "id": "a97",
       "action": "ادعُ لهدفك",
       "category": "spiritual",
       "intensity": "low",
-      "time": ["any"],
+      "time": [
+        "any"
+      ],
       "cooldown": 0,
       "requires_tools": false,
       "goal": "Focus",
       "success_condition": "دعاء واضح",
       "guidance": "اطلب هدفك",
-      "variations": ["نجاح", "هدوء", "قوة"]
+      "variations": [
+        "نجاح",
+        "هدوء",
+        "قوة"
+      ],
+      "duration": 300
     },
     {
       "id": "a98",
       "action": "ابتعد 5 دقائق",
       "category": "anti_addiction",
       "intensity": "high",
-      "time": ["any"],
+      "time": [
+        "any"
+      ],
       "cooldown": 6,
       "requires_tools": false,
       "goal": "Break urge",
       "success_condition": "تغيير مكان",
       "guidance": "اخرج فورًا",
-      "variations": ["غرفة أخرى", "خارج البيت", "مشي"]
+      "variations": [
+        "غرفة أخرى",
+        "خارج البيت",
+        "مشي"
+      ],
+      "duration": 300
     },
     {
       "id": "a99",
       "action": "اقفل كل المشتتات",
       "category": "anti_addiction",
       "intensity": "high",
-      "time": ["any"],
+      "time": [
+        "any"
+      ],
       "cooldown": 6,
       "requires_tools": false,
       "goal": "Focus shield",
       "success_condition": "بيئة نظيفة",
       "guidance": "اقفل كل شيء",
-      "variations": ["صامت", "وضع طيران", "بدون إشعارات"]
+      "variations": [
+        "صامت",
+        "وضع طيران",
+        "بدون إشعارات"
+      ],
+      "duration": 300
     },
     {
       "id": "a100",
       "action": "ابدأ أصعب شيء",
       "category": "productivity",
       "intensity": "high",
-      "time": ["any"],
+      "time": [
+        "any"
+      ],
       "cooldown": 72,
       "requires_tools": false,
       "goal": "Discipline",
       "success_condition": "أول خطوة",
       "guidance": "ابدأ فورًا",
-      "variations": ["مهمة صعبة", "أول خطوة", "بدون تفكير"]
+      "variations": [
+        "مهمة صعبة",
+        "أول خطوة",
+        "بدون تفكير"
+      ],
+      "duration": 300
     },
     {
       "id": "a101",
       "action": "اقفل كل شيء فورًا",
       "category": "anti_addiction",
       "intensity": "critical",
-      "time": ["any"],
+      "time": [
+        "any"
+      ],
       "cooldown": 6,
       "requires_tools": false,
       "goal": "Emergency stop",
       "success_condition": "إيقاف كامل للنشاط الرقمي",
       "guidance": "اقفل كل التطبيقات فورًا بدون تفكير",
-      "variations": ["إغلاق شامل", "Force stop", "خروج فوري"]
+      "variations": [
+        "إغلاق شامل",
+        "Force stop",
+        "خروج فوري"
+      ],
+      "duration": 300
     },
     {
       "id": "a102",
       "action": "قوم من مكانك الآن",
       "category": "anti_addiction",
       "intensity": "critical",
-      "time": ["any"],
+      "time": [
+        "any"
+      ],
       "cooldown": 6,
       "requires_tools": false,
       "goal": "Break paralysis",
       "success_condition": "تغيير وضع الجسم",
       "guidance": "انهض فورًا",
-      "variations": ["قف", "امشِ", "غير الغرفة"]
+      "variations": [
+        "قف",
+        "امشِ",
+        "غير الغرفة"
+      ],
+      "duration": 300
     },
     {
       "id": "a103",
       "action": "اخرج من الغرفة",
       "category": "anti_addiction",
       "intensity": "critical",
-      "time": ["any"],
+      "time": [
+        "any"
+      ],
       "cooldown": 6,
       "requires_tools": false,
       "goal": "Environment reset",
       "success_condition": "تغيير المكان",
       "guidance": "اخرج فورًا",
-      "variations": ["ممر", "صالة", "خارج البيت"]
+      "variations": [
+        "ممر",
+        "صالة",
+        "خارج البيت"
+      ],
+      "duration": 300
     },
     {
       "id": "a104",
       "action": "اشرب ماء بارد",
       "category": "reset",
       "intensity": "low",
-      "time": ["any"],
+      "time": [
+        "any"
+      ],
       "cooldown": 12,
       "requires_tools": false,
       "goal": "Shock reset",
       "success_condition": "تنشيط فوري",
       "guidance": "اشرب الآن",
-      "variations": ["كوب واحد", "كوبين", "ببطء"]
+      "variations": [
+        "كوب واحد",
+        "كوبين",
+        "ببطء"
+      ],
+      "duration": 300
     },
     {
       "id": "a105",
       "action": "اغسل وجهك بماء بارد",
       "category": "reset",
       "intensity": "low",
-      "time": ["any"],
+      "time": [
+        "any"
+      ],
       "cooldown": 12,
       "requires_tools": false,
       "goal": "Reset state",
       "success_condition": "تنبيه عصبي",
       "guidance": "اغسل فورًا",
-      "variations": ["مرتين", "ماء بارد", "تنشيط قوي"]
+      "variations": [
+        "مرتين",
+        "ماء بارد",
+        "تنشيط قوي"
+      ],
+      "duration": 300
     },
-
     {
       "id": "a106",
       "action": "امشِ بسرعة 3 دقائق",
       "category": "movement",
       "intensity": "medium",
-      "time": ["any"],
+      "time": [
+        "any"
+      ],
       "cooldown": 72,
       "requires_tools": false,
       "goal": "Interrupt urge",
       "success_condition": "3 دقائق حركة",
       "guidance": "تحرك فورًا",
-      "variations": ["مشي سريع", "داخل البيت", "خارج الغرفة"]
+      "variations": [
+        "مشي سريع",
+        "داخل البيت",
+        "خارج الغرفة"
+      ],
+      "duration": 180
     },
     {
       "id": "a107",
       "action": "اعمل 10 ضغطات",
       "category": "fitness",
       "intensity": "medium",
-      "time": ["any"],
+      "time": [
+        "any"
+      ],
       "cooldown": 72,
       "requires_tools": false,
       "goal": "Energy shift",
       "success_condition": "10 عدة",
       "guidance": "ابدأ فورًا",
-      "variations": ["بطيء", "سريع", "حتى الفشل"]
+      "variations": [
+        "بطيء",
+        "سريع",
+        "حتى الفشل"
+      ],
+      "duration": 300
     },
     {
       "id": "a108",
       "action": "اعمل 20 سكوات",
       "category": "fitness",
       "intensity": "medium",
-      "time": ["any"],
+      "time": [
+        "any"
+      ],
       "cooldown": 72,
       "requires_tools": false,
       "goal": "Activation",
       "success_condition": "20 عدة",
       "guidance": "انزل واطلع",
-      "variations": ["بطيء", "سريع", "3 مجموعات"]
+      "variations": [
+        "بطيء",
+        "سريع",
+        "3 مجموعات"
+      ],
+      "duration": 300
     },
     {
       "id": "a109",
       "action": "بلانك حتى التعب",
       "category": "fitness",
       "intensity": "high",
-      "time": ["any"],
+      "time": [
+        "any"
+      ],
       "cooldown": 72,
       "requires_tools": false,
       "goal": "Endurance",
       "success_condition": "حد أقصى",
       "guidance": "اثبت لأقصى وقت",
-      "variations": ["1 دقيقة+", "حتى الفشل", "جولتين"]
+      "variations": [
+        "1 دقيقة+",
+        "حتى الفشل",
+        "جولتين"
+      ],
+      "duration": 300
     },
     {
       "id": "a110",
       "action": "ابدأ أول خطوة فقط",
       "category": "productivity",
       "intensity": "critical",
-      "time": ["any"],
+      "time": [
+        "any"
+      ],
       "cooldown": 72,
       "requires_tools": false,
       "goal": "Overcome inertia",
       "success_condition": "خطوة واحدة",
       "guidance": "ابدأ بدون تفكير",
-      "variations": ["افتح الملف", "اكتب سطر", "شغل الجهاز"]
+      "variations": [
+        "افتح الملف",
+        "اكتب سطر",
+        "شغل الجهاز"
+      ],
+      "duration": 300
     },
-
     {
       "id": "a111",
       "action": "اشتغل 2 دقيقة فقط",
       "category": "productivity",
       "intensity": "low",
-      "time": ["any"],
+      "time": [
+        "any"
+      ],
       "cooldown": 72,
       "requires_tools": false,
       "goal": "Start trigger",
       "success_condition": "2 دقائق",
       "guidance": "ابدأ حتى لو قليل",
-      "variations": ["مؤقت", "سريع", "بدون ضغط"]
+      "variations": [
+        "مؤقت",
+        "سريع",
+        "بدون ضغط"
+      ],
+      "duration": 120
     },
     {
       "id": "a112",
       "action": "اقرأ سطر واحد",
       "category": "mind",
       "intensity": "low",
-      "time": ["any"],
+      "time": [
+        "any"
+      ],
       "cooldown": 72,
       "requires_tools": true,
       "goal": "Micro focus",
       "success_condition": "سطر واحد",
       "guidance": "اقرأ فقط سطر",
-      "variations": ["كتاب", "مقال", "ملخص"]
+      "variations": [
+        "كتاب",
+        "مقال",
+        "ملخص"
+      ],
+      "duration": 300
     },
     {
       "id": "a113",
       "action": "حل جزء صغير",
       "category": "mind",
       "intensity": "medium",
-      "time": ["any"],
+      "time": [
+        "any"
+      ],
       "cooldown": 72,
       "requires_tools": true,
       "goal": "Micro progress",
       "success_condition": "جزء واحد",
       "guidance": "حل جزء فقط",
-      "variations": ["مسألة", "خطوة", "سؤال"]
+      "variations": [
+        "مسألة",
+        "خطوة",
+        "سؤال"
+      ],
+      "duration": 300
     },
     {
       "id": "a114",
       "action": "غيّر وضعك فورًا",
       "category": "anti_addiction",
       "intensity": "critical",
-      "time": ["any"],
+      "time": [
+        "any"
+      ],
       "cooldown": 6,
       "requires_tools": false,
       "goal": "Interrupt state",
       "success_condition": "تغيير فوري",
       "guidance": "غير وضعك الآن",
-      "variations": ["قف", "امشِ", "اخرج"]
+      "variations": [
+        "قف",
+        "امشِ",
+        "اخرج"
+      ],
+      "duration": 300
     },
     {
       "id": "a115",
       "action": "اقفل المشتت الأساسي",
       "category": "anti_addiction",
       "intensity": "critical",
-      "time": ["any"],
+      "time": [
+        "any"
+      ],
       "cooldown": 6,
       "requires_tools": false,
       "goal": "Focus protection",
       "success_condition": "إغلاق المصدر",
       "guidance": "اقفل السبب الأساسي",
-      "variations": ["موبايل", "تطبيق", "موقع"]
+      "variations": [
+        "موبايل",
+        "تطبيق",
+        "موقع"
+      ],
+      "duration": 300
     },
-
     {
       "id": "a116",
       "action": "تنفس 10 مرات ببطء",
       "category": "reset",
       "intensity": "low",
-      "time": ["any"],
+      "time": [
+        "any"
+      ],
       "cooldown": 6,
       "requires_tools": false,
       "goal": "Calm reset",
       "success_condition": "هدوء فوري",
       "guidance": "تنفس ببطء",
-      "variations": ["عميق", "4-4-6", "هدوء"]
+      "variations": [
+        "عميق",
+        "4-4-6",
+        "هدوء"
+      ],
+      "duration": 300
     },
     {
       "id": "a117",
       "action": "اذكر الله فورًا",
       "category": "spiritual",
       "intensity": "low",
-      "time": ["any"],
+      "time": [
+        "any"
+      ],
       "cooldown": 0,
       "requires_tools": false,
       "goal": "Stability",
       "success_condition": "تهدئة",
       "guidance": "ابدأ الذكر الآن",
-      "variations": ["استغفار", "تسبيح", "دعاء"]
+      "variations": [
+        "استغفار",
+        "تسبيح",
+        "دعاء"
+      ],
+      "duration": 300
     },
     {
       "id": "a118",
       "action": "ادعُ واطلب قوة",
       "category": "spiritual",
       "intensity": "low",
-      "time": ["any"],
+      "time": [
+        "any"
+      ],
       "cooldown": 0,
       "requires_tools": false,
       "goal": "Strength",
       "success_condition": "دعاء واضح",
       "guidance": "اطلب الثبات",
-      "variations": ["قوة", "تركيز", "نجاح"]
+      "variations": [
+        "قوة",
+        "تركيز",
+        "نجاح"
+      ],
+      "duration": 300
     },
     {
       "id": "a119",
       "action": "ابدأ الآن بدون تفكير",
       "category": "productivity",
       "intensity": "critical",
-      "time": ["any"],
+      "time": [
+        "any"
+      ],
       "cooldown": 72,
       "requires_tools": false,
       "goal": "Zero resistance",
       "success_condition": "فعل فوري",
       "guidance": "لا تفكر—ابدأ",
-      "variations": ["أي مهمة", "أي خطوة", "أي شيء"]
+      "variations": [
+        "أي مهمة",
+        "أي خطوة",
+        "أي شيء"
+      ],
+      "duration": 300
     },
     {
       "id": "a120",
       "action": "كسر الحلقة فورًا",
       "category": "anti_addiction",
       "intensity": "critical",
-      "time": ["any"],
+      "time": [
+        "any"
+      ],
       "cooldown": 6,
       "requires_tools": false,
       "goal": "Full reset",
       "success_condition": "توقف كامل للسلوك",
       "guidance": "اقطع الدورة الآن",
-      "variations": ["تحرك", "اقفل الجهاز", "غيّر المكان"]
+      "variations": [
+        "تحرك",
+        "اقفل الجهاز",
+        "غيّر المكان"
+      ],
+      "duration": 300
     }
   ]
 }
-
