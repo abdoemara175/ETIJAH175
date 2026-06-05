@@ -267,23 +267,40 @@ class FocusEngine {
   confirm(status) {
     if (!this.lastDecision) return;
 
+    // Get current points from localStorage
+    let points = parseInt(localStorage.getItem("points") || "0");
+
+    // Update points based on status
+    if (status === "DONE") {
+      points += 1; // Add 1 point for DONE
+    } else if (status === "FAILED") {
+      points -= 1; // Subtract 1 point for FAILED
+    }
+    // SKIP doesn't change points
+
+    // Ensure points don't go below 0
+    points = Math.max(0, points);
+
     this.history.push({
       id: this.lastDecision.id,
       title: this.lastDecision.title || this.lastDecision.action,
       type: this.lastDecision.type,
       category: this.lastDecision.category,
       time: Date.now(),
-      status: status
+      status: status,
+      points: points
     });
 
     localStorage.setItem("history", JSON.stringify(this.history));
+    localStorage.setItem("points", points.toString());
 
     // Update activity time
     this.lastActivityTime = Date.now();
 
     return {
       status: status,
-      message: this.getConfirmationMessage(status)
+      message: this.getConfirmationMessage(status),
+      points: points
     };
   }
 
