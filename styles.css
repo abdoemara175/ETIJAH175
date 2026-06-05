@@ -992,9 +992,9 @@ body {
 
 /* State Buttons */
 .state-buttons {
-    display: flex;
+    display: inline-flex;
     gap: var(--spacing-sm);
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: center;
 }
 
