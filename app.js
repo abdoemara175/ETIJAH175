@@ -25,6 +25,15 @@ class AppController {
       generateBtn.addEventListener("click", () => this.handleGenerate());
     }
 
+    // State buttons
+    const stateButtons = document.querySelectorAll('.btn-state');
+    stateButtons.forEach(btn => {
+      btn.addEventListener("click", (e) => {
+        const state = e.target.getAttribute('data-state');
+        this.setUserState(state);
+      });
+    });
+
     // Confirmation buttons - MUST RESPOND
     const acceptBtn = document.getElementById("acceptBtn");
     const doneBtn = document.getElementById("doneBtn");

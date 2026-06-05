@@ -201,9 +201,13 @@ class FocusEngine {
   // ==============================
   // DECISION ENGINE (CORE)
   // ==============================
-  generate(mode = "all") {
-    // Detect current state
-    this.currentState = this.detectState();
+  generate(mode = "all", userState = null) {
+    // Use provided user state or detect automatically
+    if (userState) {
+      this.currentState = userState;
+    } else {
+      this.currentState = this.detectState();
+    }
 
     // Build pool
     let pool = this.buildPool();

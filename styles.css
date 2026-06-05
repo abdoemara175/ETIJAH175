@@ -989,3 +989,33 @@ body {
     background-color: rgba(163, 240, 89, 0.4);
     box-shadow: 0 0 15px rgba(163, 240, 89, 0.5);
 }
+
+/* State Buttons */
+.state-buttons {
+    display: flex;
+    gap: var(--spacing-sm);
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.btn-state {
+    padding: var(--spacing-xs) var(--spacing-sm);
+    font-size: 0.9rem;
+    border: 2px solid var(--accent-secondary);
+    background-color: transparent;
+    color: var(--accent-secondary);
+    border-radius: var(--radius-lg);
+    cursor: pointer;
+    transition: all var(--transition-normal);
+}
+
+.btn-state:hover {
+    background-color: rgba(255, 158, 44, 0.1);
+    box-shadow: 0 0 10px rgba(255, 158, 44, 0.3);
+}
+
+.btn-state.active {
+    background-color: var(--accent-secondary);
+    color: var(--bg-color);
+    box-shadow: 0 0 15px rgba(255, 158, 44, 0.6);
+}
