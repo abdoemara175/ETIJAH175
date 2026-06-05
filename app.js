@@ -36,12 +36,16 @@ class AppController {
 
     // Mode buttons
     const emergencyBtn = document.getElementById("emergencyBtn");
-    const missionsBtn = document.getElementById("missionsBtn");
-    const actionsBtn = document.getElementById("actionsBtn");
-
     if (emergencyBtn) emergencyBtn.addEventListener("click", () => this.activateEmergencyMode());
-    if (missionsBtn) missionsBtn.addEventListener("click", () => this.setMode("missions"));
-    if (actionsBtn) actionsBtn.addEventListener("click", () => this.setMode("actions"));
+
+    // Category buttons
+    const categoryButtons = document.querySelectorAll('.btn-category');
+    categoryButtons.forEach(btn => {
+      btn.addEventListener("click", (e) => {
+        const category = e.target.getAttribute('data-category');
+        this.setMode(category);
+      });
+    });
 
     // Reset button
     const resetBtn = document.getElementById("resetBtn");
@@ -139,7 +143,6 @@ class AppController {
       <div class="output-content">
         <div class="item-header">
           <h2>${item.title || item.action}</h2>
-          <button class="btn-category-menu" id="categoryMenuBtn" title="اختر فئة">▼</button>
         </div>
         
         <div class="output-meta">
@@ -163,12 +166,6 @@ class AppController {
     output.innerHTML = html;
     output.classList.add("active");
     
-    // Add category menu button listener
-    const categoryMenuBtn = document.getElementById("categoryMenuBtn");
-    if (categoryMenuBtn) {
-      categoryMenuBtn.addEventListener("click", () => this.showCategoryMenu());
-    }
-
     // Show progress container
     const progressContainer = document.getElementById("progressContainer");
     if (progressContainer) {
