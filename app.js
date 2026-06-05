@@ -90,8 +90,13 @@ class AppController {
   // ==============================
   showCategoryMenu() {
     const categories = [
-      { name: 'المهام', value: 'missions' },
-      { name: 'الإجراءات', value: 'actions' },
+      { name: 'مضاد إدمان', value: 'anti_addiction' },
+      { name: 'إنتاجية', value: 'productivity' },
+      { name: 'إعادة تعيين', value: 'reset' },
+      { name: 'حركة', value: 'movement' },
+      { name: 'لياقة', value: 'fitness' },
+      { name: 'عقل', value: 'mind' },
+      { name: 'روحي', value: 'spiritual' },
       { name: 'الكل', value: 'all' }
     ];
 

@@ -213,6 +213,9 @@ class FocusEngine {
       pool = pool.filter(item => item.type === "mission");
     } else if (mode === "actions") {
       pool = pool.filter(item => item.type === "action");
+    } else if (mode !== "all") {
+      // Filter by category
+      pool = pool.filter(item => item.category === mode);
     }
 
     if (pool.length === 0) {
