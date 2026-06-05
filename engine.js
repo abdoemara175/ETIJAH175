@@ -201,12 +201,19 @@ class FocusEngine {
   // ==============================
   // DECISION ENGINE (CORE)
   // ==============================
-  generate() {
+  generate(mode = "all") {
     // Detect current state
     this.currentState = this.detectState();
 
     // Build pool
-    const pool = this.buildPool();
+    let pool = this.buildPool();
+
+    // Filter by mode if specified
+    if (mode === "missions") {
+      pool = pool.filter(item => item.type === "mission");
+    } else if (mode === "actions") {
+      pool = pool.filter(item => item.type === "action");
+    }
 
     if (pool.length === 0) {
       console.error("No items in pool");

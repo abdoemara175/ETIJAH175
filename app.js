@@ -60,8 +60,8 @@ class AppController {
   // GENERATE - THE DECISION MOMENT
   // ==============================
   handleGenerate() {
-    // Generate the decision
-    const item = this.engine.generate();
+    // Generate the decision based on current mode
+    const item = this.engine.generate(this.currentMode);
 
     if (!item) {
       alert("خطأ: لا توجد عناصر متاحة");
@@ -232,6 +232,9 @@ class AppController {
     if (actionsBtn) {
       actionsBtn.style.opacity = mode === "actions" ? "1" : "0.5";
     }
+
+    // Generate new item with the selected mode
+    this.handleGenerate();
   }
 
   activateEmergencyMode() {
