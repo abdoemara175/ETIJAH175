@@ -221,25 +221,33 @@ class FocusEngine {
       }))
       .sort((a, b) => b.score - a.score);
 
-    // Hard rules: never repeat same ID consecutively
-    const lastItem = this.history.slice(-1)[0];
-    let chosen = scored[0].item;
+    // Get top candidates (best scored items)
+    const topCandidates = scored.slice(0, Math.min(5, scored.length));
 
-    if (lastItem && lastItem.id === chosen.id && scored.length > 1) {
-      chosen = scored[1].item;
+    // Hard rule: never repeat same ID consecutively
+    const lastItem = this.history.slice(-1)[0];
+    let filteredCandidates = topCandidates.filter(c => !lastItem || c.item.id !== lastItem.id);
+
+    // If all top candidates are the same ID, use all
+    if (filteredCandidates.length === 0) {
+      filteredCandidates = topCandidates;
     }
 
     // Hard rule: avoid same category twice in a row
-    if (lastItem && lastItem.category === chosen.category && scored.length > 2) {
-      const differentCategory = scored.find(
-        s => s.item.category !== chosen.category
+    if (lastItem) {
+      const differentCategory = filteredCandidates.filter(
+        c => c.item.category !== lastItem.category
       );
-      if (differentCategory) {
-        chosen = differentCategory.item;
+      if (differentCategory.length > 0) {
+        filteredCandidates = differentCategory;
       }
     }
 
+    // Random selection from filtered candidates (weighted randomization)
+    const chosen = filteredCandidates[Math.floor(Math.random() * filteredCandidates.length)].item;
+
     this.lastDecision = chosen;
+    console.log(`Selected: ${chosen.title || chosen.action} (ID: ${chosen.id})`);
     return chosen;
   }
 

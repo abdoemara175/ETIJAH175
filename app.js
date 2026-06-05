@@ -92,27 +92,14 @@ class AppController {
     const output = document.getElementById("output");
     if (!output) return;
 
-    const itemType = item.type === "mission" ? "🎯 مهمة" : "⚡ إجراء";
-    const duration = item.duration ? `${item.duration} دقيقة` : "-";
-    const intensity = item.intensity ? this.translateIntensity(item.intensity) : "-";
-
     let html = `
       <div class="output-content">
         <h2>${item.title || item.action}</h2>
         
         <div class="output-meta">
-          <p><b>النوع:</b> ${itemType}</p>
           <p><b>الهدف:</b> ${item.goal || "-"}</p>
-          <p><b>الحالة:</b> ${this.translateState(this.engine.currentState)}</p>
-          <p><b>الشدة:</b> ${intensity}</p>
         </div>
-    `;
-
-    if (item.duration) {
-      html += `<p><b>المدة:</b> ${duration}</p>`;
-    }
-
-    html += `
+        
         <p class="success-condition"><b>شرط النجاح:</b> ${item.success_condition || "-"}</p>
     `;
 
@@ -120,11 +107,47 @@ class AppController {
       html += `<p class="guidance"><b>التوجيه:</b> ${item.guidance}</p>`;
     }
 
-    html += `</div>`;
+    html += `
+      <div class="timer-container">
+        <div class="timer-label">الوقت المتبقي:</div>
+        <div id="timer" class="timer">00:00</div>
+      </div>
+    </div>`;
 
     output.innerHTML = html;
     output.classList.add("active");
+    
+    // Start timer
+    this.startTimer(item.duration || 5);
   }
+
+  startTimer(minutes) {
+    let totalSeconds = minutes * 60;
+    const timerElement = document.getElementById("timer");
+    
+    if (!timerElement) return;
+
+    const updateTimer = () => {
+      const mins = Math.floor(totalSeconds / 60);
+      const secs = totalSeconds % 60;
+      timerElement.textContent = `${String(mins).padStart(2, '0')}:${String(secs).padStart(2, '0')}`;
+      
+      if (totalSeconds <= 0) {
+        timerElement.classList.add("timer-done");
+        return;
+      }
+      
+      if (totalSeconds <= 60) {
+        timerElement.classList.add("timer-warning");
+      }
+      
+      totalSeconds--;
+      setTimeout(updateTimer, 1000);
+    };
+    
+    updateTimer();
+  }
+
 
   // ==============================
   // SHOW CONFIRMATION - NO ESCAPE
