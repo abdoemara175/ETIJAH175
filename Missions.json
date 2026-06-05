@@ -1,0 +1,972 @@
+{
+  "missions": [
+    {
+      "id": "m1",
+      "title": "مذاكرة مركزة 25 دقيقة",
+      "category": "study",
+      "duration": 25,
+      "intensity": "medium",
+      "goal": "Deep focus session",
+      "steps": [
+        "افتح المادة",
+        "حدد نقطة واحدة",
+        "ذاكر بدون مشتتات"
+      ],
+      "success_condition": "25 دقيقة تركيز كامل",
+      "tools_allowed": ["book", "laptop"],
+      "anti_distraction_rule": "ممنوع الموبايل"
+    },
+    {
+      "id": "m2",
+      "title": "حل 3 مسائل",
+      "category": "study",
+      "duration": 20,
+      "intensity": "medium",
+      "goal": "Problem solving",
+      "steps": [
+        "اختار 3 مسائل",
+        "حل واحدة واحدة",
+        "راجع الأخطاء"
+      ],
+      "success_condition": "3 مسائل محلولة",
+      "tools_allowed": ["notes"],
+      "anti_distraction_rule": "وضع صامت"
+    },
+    {
+      "id": "m3",
+      "title": "تنظيم يومك بالكامل",
+      "category": "productivity",
+      "duration": 15,
+      "intensity": "low",
+      "goal": "Planning",
+      "steps": [
+        "اكتب 3 مهام أساسية",
+        "حدد الأولويات",
+        "احذف غير المهم"
+      ],
+      "success_condition": "خطة يوم واضحة",
+      "tools_allowed": ["paper", "app"],
+      "anti_distraction_rule": "بدون سوشيال"
+    },
+    {
+      "id": "m4",
+      "title": "جلسة قراءة 20 دقيقة",
+      "category": "mind",
+      "duration": 20,
+      "intensity": "low",
+      "goal": "Knowledge intake",
+      "steps": [
+        "اختار كتاب",
+        "اقرأ بتركيز",
+        "سجل فكرة واحدة"
+      ],
+      "success_condition": "20 دقيقة قراءة",
+      "tools_allowed": ["book"],
+      "anti_distraction_rule": "بدون هاتف"
+    },
+    {
+      "id": "m5",
+      "title": "تمرين جسم كامل",
+      "category": "fitness",
+      "duration": 20,
+      "intensity": "high",
+      "goal": "Full body activation",
+      "steps": [
+        "ضغط",
+        "سكوات",
+        "بلانك"
+      ],
+      "success_condition": "3 جولات كاملة",
+      "tools_allowed": [],
+      "anti_distraction_rule": "لا توقف"
+    },
+    {
+      "id": "m6",
+      "title": "تنظيف شامل للغرفة",
+      "category": "life",
+      "duration": 30,
+      "intensity": "medium",
+      "goal": "Environment reset",
+      "steps": [
+        "رتب السرير",
+        "نظف المكتب",
+        "تخلص من الفوضى"
+      ],
+      "success_condition": "غرفة منظمة",
+      "tools_allowed": [],
+      "anti_distraction_rule": "موسيقى بدون كلمات فقط"
+    },
+    {
+      "id": "m7",
+      "title": "تعلم مهارة جديدة",
+      "category": "learning",
+      "duration": 30,
+      "intensity": "medium",
+      "goal": "Skill building",
+      "steps": [
+        "اختار مهارة",
+        "شاهد شرح",
+        "جرب تطبيق"
+      ],
+      "success_condition": "تجربة عملية",
+      "tools_allowed": ["laptop"],
+      "anti_distraction_rule": "بدون سوشيال"
+    },
+    {
+      "id": "m8",
+      "title": "كتابة أفكارك",
+      "category": "mind",
+      "duration": 15,
+      "intensity": "low",
+      "goal": "Mental clarity",
+      "steps": [
+        "اكتب كل اللي في دماغك",
+        "نظم الأفكار",
+        "استخرج فكرة واحدة"
+      ],
+      "success_condition": "صفحة مكتوبة",
+      "tools_allowed": ["paper"],
+      "anti_distraction_rule": "بدون حكم على نفسك"
+    },
+    {
+      "id": "m9",
+      "title": "مراجعة هدفك الأسبوعي",
+      "category": "focus",
+      "duration": 10,
+      "intensity": "low",
+      "goal": "Direction",
+      "steps": [
+        "اقرأ هدفك",
+        "قيم التقدم",
+        "عدل المسار"
+      ],
+      "success_condition": "وضوح الهدف",
+      "tools_allowed": [],
+      "anti_distraction_rule": "هدوء كامل"
+    },
+    {
+      "id": "m10",
+      "title": "مشروع صغير خطوة أولى",
+      "category": "productivity",
+      "duration": 20,
+      "intensity": "medium",
+      "goal": "Execution start",
+      "steps": [
+        "افتح المشروع",
+        "اعمل أول خطوة",
+        "لا تكمل كل شيء"
+      ],
+      "success_condition": "بدء فعلي",
+      "tools_allowed": ["laptop"],
+      "anti_distraction_rule": "لا تسويف"
+    },
+    {
+      "id": "m11",
+      "title": "جلسة مذاكرة عميقة",
+      "category": "study",
+      "duration": 30,
+      "intensity": "high",
+      "goal": "Deep focus",
+      "steps": [
+        "اختار جزء واحد فقط",
+        "اقرأ بتركيز",
+        "حل تطبيق بسيط"
+      ],
+      "success_condition": "30 دقيقة بدون مشتتات",
+      "tools_allowed": ["book", "laptop"],
+      "anti_distraction_rule": "ممنوع الهاتف"
+    },
+    {
+      "id": "m12",
+      "title": "حل امتحان صغير",
+      "category": "study",
+      "duration": 25,
+      "intensity": "high",
+      "goal": "Exam practice",
+      "steps": [
+        "اختار نموذج",
+        "حل بدون توقف",
+        "راجع الإجابات"
+      ],
+      "success_condition": "حل نموذج كامل أو جزئي",
+      "tools_allowed": ["paper"],
+      "anti_distraction_rule": "بدون مصادر خارجية"
+    },
+    {
+      "id": "m13",
+      "title": "تعلم أداة جديدة",
+      "category": "learning",
+      "duration": 30,
+      "intensity": "medium",
+      "goal": "Skill expansion",
+      "steps": [
+        "اختار أداة",
+        "شاهد شرح سريع",
+        "جربها بنفسك"
+      ],
+      "success_condition": "تجربة عملية",
+      "tools_allowed": ["laptop"],
+      "anti_distraction_rule": "لا تشتيت"
+    },
+    {
+      "id": "m14",
+      "title": "كتابة صفحة كاملة",
+      "category": "mind",
+      "duration": 20,
+      "intensity": "low",
+      "goal": "Expression",
+      "steps": [
+        "اكتب بدون توقف",
+        "فرّغ دماغك",
+        "راجع لاحقًا"
+      ],
+      "success_condition": "صفحة مكتوبة",
+      "tools_allowed": ["paper"],
+      "anti_distraction_rule": "بدون تعديل أثناء الكتابة"
+    },
+    {
+      "id": "m15",
+      "title": "تمرين كارديو",
+      "category": "fitness",
+      "duration": 20,
+      "intensity": "high",
+      "goal": "Cardio activation",
+      "steps": [
+        "جري في المكان",
+        "قفز",
+        "حركة مستمرة"
+      ],
+      "success_condition": "20 دقيقة حركة",
+      "tools_allowed": [],
+      "anti_distraction_rule": "لا توقف"
+    },
+
+    {
+      "id": "m16",
+      "title": "تنظيف كامل المكتب الرقمي",
+      "category": "productivity",
+      "duration": 15,
+      "intensity": "low",
+      "goal": "Digital order",
+      "steps": [
+        "احذف ملفات غير مهمة",
+        "رتب المجلدات",
+        "نظف سطح المكتب"
+      ],
+      "success_condition": "نظام مرتب",
+      "tools_allowed": ["laptop"],
+      "anti_distraction_rule": "بدون تصفح عشوائي"
+    },
+    {
+      "id": "m17",
+      "title": "بناء عادة جديدة",
+      "category": "life",
+      "duration": 20,
+      "intensity": "medium",
+      "goal": "Habit formation",
+      "steps": [
+        "اختار عادة",
+        "حدد أول خطوة",
+        "نفذ فورًا"
+      ],
+      "success_condition": "تنفيذ أول مرة",
+      "tools_allowed": [],
+      "anti_distraction_rule": "لا تفكير زائد"
+    },
+    {
+      "id": "m18",
+      "title": "مراجعة تقدمك",
+      "category": "focus",
+      "duration": 10,
+      "intensity": "low",
+      "goal": "Self audit",
+      "steps": [
+        "راجع اليوم",
+        "حدد خطأ واحد",
+        "حدد تحسين"
+      ],
+      "success_condition": "تقييم واضح",
+      "tools_allowed": [],
+      "anti_distraction_rule": "بدون جلد ذات"
+    },
+    {
+      "id": "m19",
+      "title": "قراءة مركزة",
+      "category": "mind",
+      "duration": 25,
+      "intensity": "medium",
+      "goal": "Knowledge intake",
+      "steps": [
+        "اقرأ بصمت",
+        "سجل فكرة",
+        "لا تقطع القراءة"
+      ],
+      "success_condition": "25 دقيقة قراءة",
+      "tools_allowed": ["book"],
+      "anti_distraction_rule": "لا هاتف"
+    },
+    {
+      "id": "m20",
+      "title": "حل 5 أسئلة تدريب",
+      "category": "study",
+      "duration": 25,
+      "intensity": "medium",
+      "goal": "Practice",
+      "steps": [
+        "ابدأ بالسهل",
+        "تدرج في الصعوبة",
+        "راجع الأخطاء"
+      ],
+      "success_condition": "5 أسئلة محلولة",
+      "tools_allowed": ["paper"],
+      "anti_distraction_rule": "بدون مساعدات"
+    },
+
+    {
+      "id": "m21",
+      "title": "جلسة تركيز 15 دقيقة",
+      "category": "productivity",
+      "duration": 15,
+      "intensity": "medium",
+      "goal": "Focus burst",
+      "steps": [
+        "حدد مهمة واحدة",
+        "ابدأ فورًا",
+        "لا توقف"
+      ],
+      "success_condition": "15 دقيقة عمل",
+      "tools_allowed": [],
+      "anti_distraction_rule": "لا موبايل"
+    },
+    {
+      "id": "m22",
+      "title": "تعلم مفهوم جديد",
+      "category": "learning",
+      "duration": 20,
+      "intensity": "medium",
+      "goal": "Understanding",
+      "steps": [
+        "شاهد شرح",
+        "اكتب ملخص",
+        "جرب تطبيق"
+      ],
+      "success_condition": "فهم مفهوم واحد",
+      "tools_allowed": ["laptop"],
+      "anti_distraction_rule": "لا تنقل بين مصادر"
+    },
+    {
+      "id": "m23",
+      "title": "تنظيف البيئة المحيطة",
+      "category": "life",
+      "duration": 15,
+      "intensity": "low",
+      "goal": "Environment reset",
+      "steps": [
+        "رتب المكان",
+        "تخلص من الفوضى",
+        "نظف سطح"
+      ],
+      "success_condition": "مكان مرتب",
+      "tools_allowed": [],
+      "anti_distraction_rule": "بدون تشتت"
+    },
+    {
+      "id": "m24",
+      "title": "تمرين مقاومة",
+      "category": "fitness",
+      "duration": 20,
+      "intensity": "high",
+      "goal": "Strength",
+      "steps": [
+        "ضغط",
+        "سكوات",
+        "بلانك"
+      ],
+      "success_condition": "3 جولات",
+      "tools_allowed": [],
+      "anti_distraction_rule": "لا توقف"
+    },
+    {
+      "id": "m25",
+      "title": "كتابة خطة الأسبوع",
+      "category": "focus",
+      "duration": 15,
+      "intensity": "low",
+      "goal": "Planning",
+      "steps": [
+        "حدد 3 أهداف",
+        "رتب الأيام",
+        "احذف غير مهم"
+      ],
+      "success_condition": "خطة واضحة",
+      "tools_allowed": [],
+      "anti_distraction_rule": "تركيز كامل"
+    },
+    {
+      "id": "m26",
+      "title": "جلسة Deep Work مركزة",
+      "category": "productivity",
+      "duration": 40,
+      "intensity": "high",
+      "goal": "Deep focus execution",
+      "steps": [
+        "اختار مهمة واحدة فقط",
+        "اقفل كل المشتتات",
+        "اشتغل بدون توقف"
+      ],
+      "success_condition": "40 دقيقة تركيز كامل",
+      "tools_allowed": ["laptop"],
+      "anti_distraction_rule": "ممنوع أي تطبيق غير المهمة"
+    },
+    {
+      "id": "m27",
+      "title": "حل مشروع صغير",
+      "category": "study",
+      "duration": 35,
+      "intensity": "high",
+      "goal": "Applied learning",
+      "steps": [
+        "افتح المشروع",
+        "حل جزء أساسي",
+        "اختبر النتيجة"
+      ],
+      "success_condition": "جزء مكتمل من مشروع",
+      "tools_allowed": ["laptop"],
+      "anti_distraction_rule": "بدون تبديل مهام"
+    },
+    {
+      "id": "m28",
+      "title": "تعلم مهارة عملية",
+      "category": "learning",
+      "duration": 30,
+      "intensity": "medium",
+      "goal": "Skill acquisition",
+      "steps": [
+        "شاهد شرح واحد",
+        "طبق فورًا",
+        "كرر التجربة"
+      ],
+      "success_condition": "تطبيق عملي",
+      "tools_allowed": ["laptop"],
+      "anti_distraction_rule": "مصدر واحد فقط"
+    },
+    {
+      "id": "m29",
+      "title": "كتابة تحليل فكرة",
+      "category": "mind",
+      "duration": 20,
+      "intensity": "low",
+      "goal": "Critical thinking",
+      "steps": [
+        "اختار فكرة",
+        "حللها",
+        "اكتب استنتاج"
+      ],
+      "success_condition": "تحليل مكتوب",
+      "tools_allowed": ["paper"],
+      "anti_distraction_rule": "بدون حذف أو تعديل زائد"
+    },
+    {
+      "id": "m30",
+      "title": "مراجعة أخطاءك",
+      "category": "focus",
+      "duration": 15,
+      "intensity": "low",
+      "goal": "Self correction",
+      "steps": [
+        "راجع يومك",
+        "حدد خطأ",
+        "اكتب حل"
+      ],
+      "success_condition": "3 نقاط تحسين",
+      "tools_allowed": [],
+      "anti_distraction_rule": "بدون جلد ذات"
+    },
+
+    {
+      "id": "m31",
+      "title": "جلسة رياضية مكثفة",
+      "category": "fitness",
+      "duration": 25,
+      "intensity": "high",
+      "goal": "Full activation",
+      "steps": [
+        "ضغط",
+        "سكوات",
+        "جري في المكان"
+      ],
+      "success_condition": "25 دقيقة حركة",
+      "tools_allowed": [],
+      "anti_distraction_rule": "لا توقف"
+    },
+    {
+      "id": "m32",
+      "title": "تنظيف شامل للموبايل",
+      "category": "life",
+      "duration": 20,
+      "intensity": "medium",
+      "goal": "Digital detox",
+      "steps": [
+        "احذف تطبيقات غير ضرورية",
+        "رتب الشاشة",
+        "قلل الإشعارات"
+      ],
+      "success_condition": "هاتف منظم",
+      "tools_allowed": [],
+      "anti_distraction_rule": "لا فتح سوشيال أثناء المهمة"
+    },
+    {
+      "id": "m33",
+      "title": "تخطيط هدف كبير",
+      "category": "focus",
+      "duration": 20,
+      "intensity": "medium",
+      "goal": "Strategic planning",
+      "steps": [
+        "حدد هدف",
+        "قسمه خطوات",
+        "ابدأ أول خطوة"
+      ],
+      "success_condition": "خطة واضحة",
+      "tools_allowed": [],
+      "anti_distraction_rule": "تفكير بدون تشتت"
+    },
+    {
+      "id": "m34",
+      "title": "قراءة تحليلية",
+      "category": "mind",
+      "duration": 25,
+      "intensity": "medium",
+      "goal": "Deep comprehension",
+      "steps": [
+        "اقرأ جزء",
+        "اكتب ملخص",
+        "استخرج فكرة"
+      ],
+      "success_condition": "تحليل صفحة",
+      "tools_allowed": ["book"],
+      "anti_distraction_rule": "بدون هاتف"
+    },
+    {
+      "id": "m35",
+      "title": "حل 10 أسئلة تدريب",
+      "category": "study",
+      "duration": 30,
+      "intensity": "high",
+      "goal": "Practice mastery",
+      "steps": [
+        "ابدأ بالأسهل",
+        "تدرج في الصعوبة",
+        "راجع الأخطاء"
+      ],
+      "success_condition": "10 أسئلة محلولة",
+      "tools_allowed": ["paper"],
+      "anti_distraction_rule": "لا مصادر خارجية"
+    },
+
+    {
+      "id": "m36",
+      "title": "جلسة إنتاج مركزة",
+      "category": "productivity",
+      "duration": 30,
+      "intensity": "high",
+      "goal": "Output creation",
+      "steps": [
+        "ابدأ مهمة واحدة",
+        "استمر بدون توقف",
+        "أنجز جزء واضح"
+      ],
+      "success_condition": "مخرجات واضحة",
+      "tools_allowed": ["laptop"],
+      "anti_distraction_rule": "لا تبديل مهام"
+    },
+    {
+      "id": "m37",
+      "title": "تعلم أداة برمجية",
+      "category": "learning",
+      "duration": 30,
+      "intensity": "medium",
+      "goal": "Technical skill",
+      "steps": [
+        "شاهد شرح",
+        "جرب تطبيق",
+        "عدل نتيجة"
+      ],
+      "success_condition": "تجربة فعلية",
+      "tools_allowed": ["laptop"],
+      "anti_distraction_rule": "مصدر واحد"
+    },
+    {
+      "id": "m38",
+      "title": "إعادة ترتيب الأولويات",
+      "category": "focus",
+      "duration": 15,
+      "intensity": "low",
+      "goal": "Priority clarity",
+      "steps": [
+        "اكتب المهام",
+        "رتبها",
+        "احذف غير مهم"
+      ],
+      "success_condition": "قائمة واضحة",
+      "tools_allowed": [],
+      "anti_distraction_rule": "بدون تشتت"
+    },
+    {
+      "id": "m39",
+      "title": "تمرين تحمل",
+      "category": "fitness",
+      "duration": 20,
+      "intensity": "high",
+      "goal": "Endurance",
+      "steps": [
+        "بلانك",
+        "سكوات",
+        "ضغط"
+      ],
+      "success_condition": "3 جولات",
+      "tools_allowed": [],
+      "anti_distraction_rule": "لا توقف"
+    },
+    {
+      "id": "m40",
+      "title": "جلسة تفكير عميق",
+      "category": "mind",
+      "duration": 25,
+      "intensity": "medium",
+      "goal": "Reflection",
+      "steps": [
+        "فكر في مشكلة",
+        "اكتب حل",
+        "حدد خطوة"
+      ],
+      "success_condition": "حل مكتوب",
+      "tools_allowed": ["paper"],
+      "anti_distraction_rule": "هدوء كامل"
+    },
+    {
+      "id": "m41",
+      "title": "بناء جزء من مشروعك الأساسي",
+      "category": "productivity",
+      "duration": 45,
+      "intensity": "high",
+      "goal": "Core project execution",
+      "steps": [
+        "افتح المشروع",
+        "نفذ ميزة واحدة",
+        "اختبر النتيجة"
+      ],
+      "success_condition": "ميزة واحدة مكتملة",
+      "tools_allowed": ["laptop"],
+      "anti_distraction_rule": "ممنوع أي مهام جانبية"
+    },
+    {
+      "id": "m42",
+      "title": "كتابة صفحة كاملة عن فكرة مشروع",
+      "category": "mind",
+      "duration": 30,
+      "intensity": "medium",
+      "goal": "Idea expansion",
+      "steps": [
+        "اختار فكرة",
+        "اكتب شرح كامل",
+        "حدد القيمة"
+      ],
+      "success_condition": "صفحة واضحة",
+      "tools_allowed": ["paper"],
+      "anti_distraction_rule": "بدون تعديل زائد"
+    },
+    {
+      "id": "m43",
+      "title": "حل اختبار تجريبي كامل",
+      "category": "study",
+      "duration": 45,
+      "intensity": "high",
+      "goal": "Exam readiness",
+      "steps": [
+        "ابدأ الاختبار",
+        "حل بدون توقف",
+        "راجع الأخطاء"
+      ],
+      "success_condition": "اختبار مكتمل",
+      "tools_allowed": ["paper"],
+      "anti_distraction_rule": "بدون مصادر مساعدة"
+    },
+    {
+      "id": "m44",
+      "title": "بناء عادة يومية جديدة",
+      "category": "life",
+      "duration": 20,
+      "intensity": "medium",
+      "goal": "Habit formation",
+      "steps": [
+        "اختار عادة",
+        "حدد وقتها",
+        "نفذ أول مرة"
+      ],
+      "success_condition": "تنفيذ أول مرة",
+      "tools_allowed": [],
+      "anti_distraction_rule": "لا تفكير زائد"
+    },
+    {
+      "id": "m45",
+      "title": "تنظيف كامل مساحة العمل",
+      "category": "life",
+      "duration": 25,
+      "intensity": "medium",
+      "goal": "Environment reset",
+      "steps": [
+        "رتب المكتب",
+        "نظف الملفات",
+        "احذف الفوضى"
+      ],
+      "success_condition": "مكان منظم",
+      "tools_allowed": [],
+      "anti_distraction_rule": "بدون موبايل"
+    },
+
+    {
+      "id": "m46",
+      "title": "جلسة تطوير مهارة تقنية",
+      "category": "learning",
+      "duration": 40,
+      "intensity": "high",
+      "goal": "Skill mastery",
+      "steps": [
+        "اختار مهارة",
+        "طبق عملي",
+        "عدل النتيجة"
+      ],
+      "success_condition": "تطبيق عملي كامل",
+      "tools_allowed": ["laptop"],
+      "anti_distraction_rule": "مصدر واحد فقط"
+    },
+    {
+      "id": "m47",
+      "title": "إنشاء خطة شهر كامل",
+      "category": "focus",
+      "duration": 30,
+      "intensity": "medium",
+      "goal": "Long-term planning",
+      "steps": [
+        "حدد أهداف الشهر",
+        "قسمها أسابيع",
+        "حدد أول خطوة"
+      ],
+      "success_condition": "خطة واضحة",
+      "tools_allowed": [],
+      "anti_distraction_rule": "تركيز كامل"
+    },
+    {
+      "id": "m48",
+      "title": "بناء جزء من تطبيق أو مشروع برمجي",
+      "category": "productivity",
+      "duration": 45,
+      "intensity": "high",
+      "goal": "Build output",
+      "steps": [
+        "افتح الكود",
+        "نفذ جزء",
+        "اختبر"
+      ],
+      "success_condition": "جزء برمجي يعمل",
+      "tools_allowed": ["laptop"],
+      "anti_distraction_rule": "بدون تبديل سياق"
+    },
+    {
+      "id": "m49",
+      "title": "جلسة قراءة تحليلية عميقة",
+      "category": "mind",
+      "duration": 30,
+      "intensity": "medium",
+      "goal": "Deep understanding",
+      "steps": [
+        "اقرأ جزء",
+        "حلله",
+        "اكتب استنتاج"
+      ],
+      "success_condition": "تحليل مكتوب",
+      "tools_allowed": ["book"],
+      "anti_distraction_rule": "بدون هاتف"
+    },
+    {
+      "id": "m50",
+      "title": "حل 15 سؤال تدريبي",
+      "category": "study",
+      "duration": 45,
+      "intensity": "high",
+      "goal": "High practice volume",
+      "steps": [
+        "ابدأ بالأسهل",
+        "استمر بدون توقف",
+        "راجع الأخطاء"
+      ],
+      "success_condition": "15 سؤال محلول",
+      "tools_allowed": ["paper"],
+      "anti_distraction_rule": "لا مصادر خارجية"
+    },
+
+    {
+      "id": "m51",
+      "title": "جلسة إنتاج محتوى",
+      "category": "productivity",
+      "duration": 40,
+      "intensity": "high",
+      "goal": "Output creation",
+      "steps": [
+        "اختار فكرة",
+        "نفذ محتوى",
+        "راجع الناتج"
+      ],
+      "success_condition": "محتوى مكتمل",
+      "tools_allowed": ["laptop"],
+      "anti_distraction_rule": "بدون سوشيال"
+    },
+    {
+      "id": "m52",
+      "title": "تحليل مشكلة شخصية",
+      "category": "mind",
+      "duration": 25,
+      "intensity": "medium",
+      "goal": "Self awareness",
+      "steps": [
+        "حدد المشكلة",
+        "اكتب السبب",
+        "اكتب حل"
+      ],
+      "success_condition": "تحليل واضح",
+      "tools_allowed": ["paper"],
+      "anti_distraction_rule": "بدون حكم ذاتي"
+    },
+    {
+      "id": "m53",
+      "title": "جلسة تدريب جسم كامل",
+      "category": "fitness",
+      "duration": 30,
+      "intensity": "high",
+      "goal": "Full body strength",
+      "steps": [
+        "ضغط",
+        "سكوات",
+        "بلانك",
+        "كارديو"
+      ],
+      "success_condition": "4 جولات",
+      "tools_allowed": [],
+      "anti_distraction_rule": "لا توقف"
+    },
+    {
+      "id": "m54",
+      "title": "تعلم موضوع جديد بالكامل",
+      "category": "learning",
+      "duration": 45,
+      "intensity": "high",
+      "goal": "Knowledge expansion",
+      "steps": [
+        "شاهد شرح",
+        "اكتب ملخص",
+        "طبق مثال"
+      ],
+      "success_condition": "فهم شامل",
+      "tools_allowed": ["laptop"],
+      "anti_distraction_rule": "مصدر واحد"
+    },
+    {
+      "id": "m55",
+      "title": "تنظيم كامل حياتك الرقمية",
+      "category": "life",
+      "duration": 30,
+      "intensity": "medium",
+      "goal": "Digital clarity",
+      "steps": [
+        "نظف التطبيقات",
+        "رتب الملفات",
+        "قلل الإشعارات"
+      ],
+      "success_condition": "نظام نظيف",
+      "tools_allowed": [],
+      "anti_distraction_rule": "بدون تصفح"
+    },
+
+    {
+      "id": "m56",
+      "title": "جلسة إنجاز مهمة صعبة",
+      "category": "productivity",
+      "duration": 45,
+      "intensity": "high",
+      "goal": "Hard execution",
+      "steps": [
+        "ابدأ فورًا",
+        "لا توقف",
+        "اكمل جزء مهم"
+      ],
+      "success_condition": "جزء مكتمل",
+      "tools_allowed": ["laptop"],
+      "anti_distraction_rule": "لا استسلام"
+    },
+    {
+      "id": "m57",
+      "title": "كتابة خطة تطوير ذاتي",
+      "category": "focus",
+      "duration": 30,
+      "intensity": "medium",
+      "goal": "Self improvement",
+      "steps": [
+        "حدد نقاط ضعف",
+        "حدد حلول",
+        "ابدأ خطوة"
+      ],
+      "success_condition": "خطة تطوير",
+      "tools_allowed": ["paper"],
+      "anti_distraction_rule": "تركيز كامل"
+    },
+    {
+      "id": "m58",
+      "title": "جلسة تعلم عميقة",
+      "category": "learning",
+      "duration": 40,
+      "intensity": "high",
+      "goal": "Deep learning",
+      "steps": [
+        "شاهد شرح",
+        "طبق فورًا",
+        "راجع"
+      ],
+      "success_condition": "فهم + تطبيق",
+      "tools_allowed": ["laptop"],
+      "anti_distraction_rule": "مصدر واحد"
+    },
+    {
+      "id": "m59",
+      "title": "إنهاء مهمة مؤجلة",
+      "category": "productivity",
+      "duration": 30,
+      "intensity": "high",
+      "goal": "Task completion",
+      "steps": [
+        "افتح المهمة",
+        "ابدأ فورًا",
+        "اكمل جزء كبير"
+      ],
+      "success_condition": "إنهاء المهمة",
+      "tools_allowed": [],
+      "anti_distraction_rule": "لا تسويف"
+    },
+    {
+      "id": "m60",
+      "title": "جلسة إعادة ضبط حياتك",
+      "category": "focus",
+      "duration": 45,
+      "intensity": "critical",
+      "goal": "Life reset",
+      "steps": [
+        "راجع أهدافك",
+        "احذف غير المهم",
+        "ابدأ من جديد بخطة"
+      ],
+      "success_condition": "خطة حياة واضحة",
+      "tools_allowed": [],
+      "anti_distraction_rule": "هدوء كامل + بدون مشتتات"
+    }
+  ]
+}

@@ -1,0 +1,454 @@
+/* ==============================
+   ETIJAH175 - Focus-first Interface
+   ============================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: #2563eb;
+    --success: #10b981;
+    --warning: #f59e0b;
+    --danger: #ef4444;
+    --emergency: #dc2626;
+    --dark: #1f2937;
+    --light: #f3f4f6;
+    --border: #e5e7eb;
+    --text: #111827;
+    --text-light: #6b7280;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text);
+    padding: 20px;
+}
+
+.container {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    max-width: 600px;
+    width: 100%;
+    overflow: hidden;
+}
+
+/* ==============================
+   HEADER
+   ============================== */
+
+header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 40px 30px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    letter-spacing: -1px;
+}
+
+header .subtitle {
+    font-size: 0.95rem;
+    opacity: 0.9;
+    font-weight: 300;
+}
+
+/* ==============================
+   MAIN CONTENT
+   ============================== */
+
+main {
+    padding: 40px 30px;
+}
+
+/* State Indicator */
+.state-indicator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 30px;
+    padding: 12px 16px;
+    background: var(--light);
+    border-radius: 8px;
+    border: 1px solid var(--border);
+}
+
+.state-indicator .label {
+    font-weight: 600;
+    color: var(--text-light);
+    font-size: 0.9rem;
+}
+
+.state-badge {
+    display: inline-block;
+    padding: 4px 12px;
+    background: var(--primary);
+    color: white;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.state-badge.idle {
+    background: #6b7280;
+}
+
+.state-badge.focused {
+    background: var(--success);
+}
+
+.state-badge.distracted {
+    background: var(--warning);
+}
+
+.state-badge.urge {
+    background: var(--danger);
+}
+
+/* Action Section */
+.action-section {
+    margin-bottom: 30px;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.btn:active {
+    transform: translateY(0);
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    font-size: 1.1rem;
+    padding: 16px 24px;
+}
+
+.btn-primary:hover {
+    box-shadow: 0 12px 24px rgba(102, 126, 234, 0.4);
+}
+
+.btn-success {
+    background: var(--success);
+    color: white;
+    flex: 1;
+}
+
+.btn-warning {
+    background: var(--warning);
+    color: white;
+    flex: 1;
+}
+
+.btn-danger {
+    background: var(--danger);
+    color: white;
+    flex: 1;
+}
+
+.btn-emergency {
+    background: var(--emergency);
+    color: white;
+    width: 100%;
+    padding: 14px 24px;
+    margin-bottom: 10px;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.7);
+    }
+    50% {
+        box-shadow: 0 0 0 10px rgba(220, 38, 38, 0);
+    }
+}
+
+.btn-mode {
+    background: var(--light);
+    color: var(--text);
+    border: 2px solid var(--border);
+    width: 100%;
+    padding: 12px 16px;
+    margin-bottom: 8px;
+}
+
+.btn-mode:hover {
+    border-color: var(--primary);
+    background: #f0f4ff;
+}
+
+.btn-reset {
+    background: var(--light);
+    color: var(--danger);
+    border: 2px solid var(--danger);
+    width: 100%;
+    padding: 12px 16px;
+}
+
+.btn-reset:hover {
+    background: var(--danger);
+    color: white;
+}
+
+/* Output Box */
+.output-box {
+    background: var(--light);
+    border: 2px solid var(--border);
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 30px;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.output-box.active {
+    border-color: var(--primary);
+    background: #f0f4ff;
+}
+
+.output-box h2 {
+    font-size: 1.5rem;
+    margin-bottom: 16px;
+    color: var(--text);
+}
+
+.output-box p {
+    margin-bottom: 12px;
+    line-height: 1.6;
+    color: var(--text-light);
+}
+
+.output-box b {
+    color: var(--text);
+    font-weight: 600;
+}
+
+.output-box .placeholder {
+    text-align: center;
+    color: #d1d5db;
+    font-size: 1.1rem;
+}
+
+/* Confirmation Section */
+.confirmation-section {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.confirmation-section .btn {
+    margin-bottom: 0;
+    flex: 1;
+}
+
+/* Modes Section */
+.modes-section {
+    margin-bottom: 30px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+}
+
+/* Stats Section */
+.stats-section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-bottom: 30px;
+    padding: 20px;
+    background: var(--light);
+    border-radius: 8px;
+    border: 1px solid var(--border);
+}
+
+.stat {
+    text-align: center;
+}
+
+.stat-label {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--text-light);
+    margin-bottom: 6px;
+    font-weight: 600;
+}
+
+.stat-value {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+/* Reset Section */
+.reset-section {
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+}
+
+/* ==============================
+   FOOTER
+   ============================== */
+
+footer {
+    background: var(--light);
+    padding: 20px 30px;
+    text-align: center;
+    border-top: 1px solid var(--border);
+    color: var(--text-light);
+    font-size: 0.9rem;
+    font-style: italic;
+}
+
+/* ==============================
+   RESPONSIVE DESIGN
+   ============================== */
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    main {
+        padding: 24px 20px;
+    }
+
+    .output-box {
+        min-height: 160px;
+        padding: 16px;
+    }
+
+    .stats-section {
+        grid-template-columns: 1fr;
+        gap: 8px;
+        padding: 12px;
+    }
+
+    .btn {
+        padding: 10px 16px;
+        font-size: 0.95rem;
+    }
+
+    .btn-primary {
+        padding: 14px 20px;
+    }
+}
+
+/* ==============================
+   ANIMATIONS
+   ============================== */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.output-box {
+    animation: fadeIn 0.3s ease;
+}
+
+/* ==============================
+   DARK MODE (Optional)
+   ============================== */
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
+    }
+
+    .container {
+        background: #1f2937;
+        color: #f3f4f6;
+    }
+
+    .output-box {
+        background: #374151;
+        border-color: #4b5563;
+        color: #e5e7eb;
+    }
+
+    .output-box h2 {
+        color: #f3f4f6;
+    }
+
+    .output-box p {
+        color: #d1d5db;
+    }
+
+    .state-indicator {
+        background: #374151;
+        border-color: #4b5563;
+    }
+
+    .state-indicator .label {
+        color: #d1d5db;
+    }
+
+    .btn-mode {
+        background: #374151;
+        color: #f3f4f6;
+        border-color: #4b5563;
+    }
+
+    .btn-mode:hover {
+        background: #4b5563;
+    }
+
+    .stats-section {
+        background: #374151;
+        border-color: #4b5563;
+    }
+
+    .stat-label {
+        color: #d1d5db;
+    }
+
+    footer {
+        background: #374151;
+        border-top-color: #4b5563;
+        color: #d1d5db;
+    }
+}

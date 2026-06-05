@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ETIJAH175 - واجهة التركيز الأولى</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>ETIJAH175</h1>
+            <p class="subtitle">نظام التحكم السلوكي الموجه بالتركيز</p>
+        </header>
+
+        <main>
+            <!-- State Indicator -->
+            <div class="state-indicator">
+                <span class="label">الحالة الحالية:</span>
+                <span id="stateDisplay" class="state-badge">جاهز</span>
+            </div>
+
+            <!-- Primary Action Button -->
+            <div class="action-section">
+                <button id="generateBtn" class="btn btn-primary">
+                    توليد التالي
+                </button>
+            </div>
+
+            <!-- Output Display -->
+            <div id="output" class="output-box">
+                <p class="placeholder">اضغط "توليد التالي" لبدء</p>
+            </div>
+
+            <!-- Confirmation Buttons -->
+            <div class="confirmation-section" style="display: none;" id="confirmSection">
+                <button id="doneBtn" class="btn btn-success">
+                    ✓ تم
+                </button>
+                <button id="skipBtn" class="btn btn-warning">
+                    ⊘ تخطي
+                </button>
+                <button id="failBtn" class="btn btn-danger">
+                    ✗ فشل
+                </button>
+            </div>
+
+            <!-- Secondary Modes -->
+            <div class="modes-section">
+                <button id="emergencyBtn" class="btn btn-emergency">
+                    وضع الطوارئ
+                </button>
+                <button id="missionsBtn" class="btn btn-mode">
+                    المهام فقط
+                </button>
+                <button id="actionsBtn" class="btn btn-mode">
+                    الإجراءات فقط
+                </button>
+            </div>
+
+            <!-- Stats -->
+            <div class="stats-section">
+                <div class="stat">
+                    <span class="stat-label">السجل:</span>
+                    <span id="historyCount" class="stat-value">0</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-label">الشريط:</span>
+                    <span id="streakCount" class="stat-value">0</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-label">الوقت:</span>
+                    <span id="timeDisplay" class="stat-value">-</span>
+                </div>
+            </div>
+
+            <!-- Reset Option -->
+            <div class="reset-section">
+                <button id="resetBtn" class="btn btn-reset">
+                    إعادة تعيين البيانات
+                </button>
+            </div>
+        </main>
+
+        <footer>
+            <p>النظام يقرر. المستخدم ينفذ. بدون تفاوض مع التشتت.</p>
+        </footer>
+    </div>
+
+    <script src="engine.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
