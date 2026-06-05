@@ -993,9 +993,10 @@ body {
 /* State Buttons */
 .state-buttons {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     gap: var(--spacing-sm);
-    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .btn-state {
