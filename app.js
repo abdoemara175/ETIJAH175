@@ -298,20 +298,38 @@ class AppController {
 // ==============================
 
 let appInitialized = false;
+let initAttempts = 0;
+const maxAttempts = 30;
 
 function initApp() {
-  if (typeof engine !== "undefined" && engine.actions.length > 0 && !appInitialized) {
-    const app = new AppController(engine);
-    appInitialized = true;
-    console.log("✓ App initialized successfully");
-  } else if (!appInitialized) {
-    setTimeout(initApp, 500);
+  if (typeof engine === "undefined") {
+    if (initAttempts < maxAttempts) {
+      initAttempts++;
+      setTimeout(initApp, 500);
+    }
+    return;
+  }
+
+  if (!appInitialized) {
+    try {
+      const app = new AppController(engine);
+      appInitialized = true;
+      console.log("App initialized successfully");
+    } catch (err) {
+      console.error("Error initializing app:", err);
+      if (initAttempts < maxAttempts) {
+        initAttempts++;
+        setTimeout(initApp, 500);
+      }
+    }
   }
 }
 
-// Start initialization
-document.addEventListener("DOMContentLoaded", initApp);
-window.addEventListener("load", initApp);
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", initApp);
+} else {
+  initApp();
+}
 
-// Fallback initialization
-setTimeout(initApp, 1000);
+window.addEventListener("load", initApp);
+setTimeout(initApp, 2000);

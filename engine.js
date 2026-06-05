@@ -26,11 +26,17 @@ class FocusEngine {
         fetch("Missions.json")
       ]);
 
+      if (!actionsRes.ok || !missionsRes.ok) {
+        throw new Error(`HTTP error! actions: ${actionsRes.status}, missions: ${missionsRes.status}`);
+      }
+
       const actionsData = await actionsRes.json();
       const missionsData = await missionsRes.json();
 
-      this.actions = actionsData.actions || actionsData;
-      this.missions = missionsData.missions || missionsData;
+      this.actions = actionsData.actions || actionsData || [];
+      this.missions = missionsData.missions || missionsData || [];
+
+      console.log(`✓ Loaded ${this.actions.length} actions and ${this.missions.length} missions`);
 
       this.bindUI();
       this.startActivityTracker();
@@ -38,6 +44,9 @@ class FocusEngine {
       console.log("✓ Engine Ready");
     } catch (err) {
       console.error("✗ Failed to load data", err);
+      // Fallback: use empty arrays
+      this.actions = [];
+      this.missions = [];
     }
   }
 
