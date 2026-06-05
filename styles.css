@@ -977,3 +977,15 @@ body {
     gap: var(--spacing-xs);
     animation: slideDown var(--transition-normal);
 }
+
+/* Accept Button */
+.btn-accept {
+    background-color: rgba(163, 240, 89, 0.2);
+    border: 2px solid var(--accent-primary);
+    color: var(--accent-primary);
+}
+
+.btn-accept:hover {
+    background-color: rgba(163, 240, 89, 0.4);
+    box-shadow: 0 0 15px rgba(163, 240, 89, 0.5);
+}

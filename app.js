@@ -26,10 +26,12 @@ class AppController {
     }
 
     // Confirmation buttons - MUST RESPOND
+    const acceptBtn = document.getElementById("acceptBtn");
     const doneBtn = document.getElementById("doneBtn");
     const skipBtn = document.getElementById("skipBtn");
     const failBtn = document.getElementById("failBtn");
 
+    if (acceptBtn) acceptBtn.addEventListener("click", () => this.handleConfirm("ACCEPT"));
     if (doneBtn) doneBtn.addEventListener("click", () => this.handleConfirm("DONE"));
     if (skipBtn) skipBtn.addEventListener("click", () => this.handleConfirm("SKIP"));
     if (failBtn) failBtn.addEventListener("click", () => this.handleConfirm("FAILED"));
@@ -250,17 +252,6 @@ class AppController {
         this.disableAllButtons(false);
         this.timerRunning = false;
         this.stopTimer();
-        
-        // Log as DONE
-        this.engine.log(this.currentItem, "DONE");
-        this.updateStats();
-        
-        // Clear output
-        const output = document.getElementById("output");
-        if (output) output.innerHTML = '<div class="output-placeholder"><p>اضغط "يلا بينا" لبدء</p></div>';
-        
-        // Generate next
-        setTimeout(() => this.handleGenerate(), 500);
         return;
       }
       
