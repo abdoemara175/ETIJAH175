@@ -243,19 +243,20 @@ body {
 /* Confirmation Buttons */
 .confirmation-section {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--spacing-md);
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--spacing-sm);
     display: none;
 }
 
 .btn-confirm {
     flex-direction: column;
-    padding: var(--spacing-lg) var(--spacing-md);
-    font-size: 0.9rem;
+    padding: var(--spacing-md) var(--spacing-sm);
+    font-size: 0.75rem;
+    min-height: 80px;
 }
 
 .btn-confirm span:first-child {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     margin-bottom: var(--spacing-xs);
 }
 

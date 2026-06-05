@@ -8,6 +8,8 @@ class AppController {
     this.engine = engine;
     this.currentMode = "all";
     this.isExecuting = false;
+    this.userState = localStorage.getItem("userState") || null;
+    this.attemptCount = 0;
     this.init();
   }
 
@@ -327,6 +329,16 @@ class AppController {
     // Update stats
     this.updateStats();
     this.updateStateDisplay();
+    
+    // Increment attempt counter
+    this.attemptCount++;
+    console.log(`Attempt: ${this.attemptCount}/5`);
+    
+    // After 5 attempts, show all states again
+    if (this.attemptCount >= 5) {
+      console.log("5 attempts reached - showing all states");
+      setTimeout(() => this.showAllStates(), 500);
+    }
   }
 
   showFeedback(status, message) {
@@ -358,6 +370,40 @@ class AppController {
       feedback.style.opacity = "0";
       setTimeout(() => feedback.remove(), 300);
     }, 2000);
+  }
+
+  // ==============================
+  // STATE MANAGEMENT
+  // ==============================
+  setUserState(state) {
+    this.userState = state;
+    this.attemptCount = 0; // Reset attempt counter
+    
+    // Update UI - show only selected state
+    const stateButtons = document.querySelectorAll('.btn-state');
+    stateButtons.forEach(btn => {
+      if (btn.getAttribute('data-state') === state) {
+        btn.classList.add('active');
+        btn.style.display = 'block';
+      } else {
+        btn.style.display = 'none';
+      }
+    });
+    
+    // Save to localStorage
+    localStorage.setItem("userState", state);
+    console.log(`User state set to: ${state}`);
+  }
+  
+  showAllStates() {
+    const stateButtons = document.querySelectorAll('.btn-state');
+    stateButtons.forEach(btn => {
+      btn.style.display = 'block';
+      btn.classList.remove('active');
+    });
+    this.userState = null;
+    localStorage.removeItem("userState");
+    console.log("All states shown - ready for new selection");
   }
 
   // ==============================
