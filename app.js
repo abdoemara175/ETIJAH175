@@ -223,11 +223,17 @@ class AppController {
   disableAllButtons(disabled) {
     const buttons = document.querySelectorAll('.btn');
     buttons.forEach(btn => {
-      btn.disabled = disabled;
-      if (disabled) {
-        btn.classList.add('btn-disabled');
-      } else {
+      // Don't disable confirmation buttons (تم, تخطي, فشل)
+      if (btn.classList.contains('btn-confirm')) {
+        btn.disabled = false;
         btn.classList.remove('btn-disabled');
+      } else {
+        btn.disabled = disabled;
+        if (disabled) {
+          btn.classList.add('btn-disabled');
+        } else {
+          btn.classList.remove('btn-disabled');
+        }
       }
     });
   }
