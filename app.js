@@ -88,13 +88,53 @@ class AppController {
   // ==============================
   // RENDER - MAKE IT CLEAR
   // ==============================
+  showCategoryMenu() {
+    const categories = [
+      { name: 'المهام', value: 'missions' },
+      { name: 'الإجراءات', value: 'actions' },
+      { name: 'الكل', value: 'all' }
+    ];
+
+    const menuHtml = `
+      <div class="category-menu">
+        ${categories.map(cat => `
+          <button class="category-option" data-category="${cat.value}">
+            ${cat.name}
+          </button>
+        `).join('')}
+      </div>
+    `;
+
+    const output = document.getElementById("output");
+    const existingMenu = output.querySelector('.category-menu');
+    if (existingMenu) {
+      existingMenu.remove();
+    } else {
+      const menu = document.createElement('div');
+      menu.innerHTML = menuHtml;
+      output.appendChild(menu);
+
+      // Add event listeners
+      menu.querySelectorAll('.category-option').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          const category = e.target.getAttribute('data-category');
+          this.setMode(category);
+          menu.remove();
+        });
+      });
+    }
+  }
+
   renderItem(item) {
     const output = document.getElementById("output");
     if (!output) return;
 
     let html = `
       <div class="output-content">
-        <h2>${item.title || item.action}</h2>
+        <div class="item-header">
+          <h2>${item.title || item.action}</h2>
+          <button class="btn-category-menu" id="categoryMenuBtn" title="اختر فئة">▼</button>
+        </div>
         
         <div class="output-meta">
           <p><b>الهدف:</b> ${item.goal || "-"}</p>
@@ -117,6 +157,12 @@ class AppController {
     output.innerHTML = html;
     output.classList.add("active");
     
+    // Add category menu button listener
+    const categoryMenuBtn = document.getElementById("categoryMenuBtn");
+    if (categoryMenuBtn) {
+      categoryMenuBtn.addEventListener("click", () => this.showCategoryMenu());
+    }
+
     // Show progress container
     const progressContainer = document.getElementById("progressContainer");
     if (progressContainer) {

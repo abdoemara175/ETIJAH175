@@ -790,3 +790,90 @@ body {
     transform: none;
     background-color: inherit;
 }
+
+/* Item Header with Category Menu */
+.item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
+}
+
+.item-header h2 {
+    flex: 1;
+    margin: 0;
+}
+
+.btn-category-menu {
+    background-color: rgba(163, 240, 89, 0.2);
+    border: 1px solid var(--accent-primary);
+    color: var(--accent-primary);
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: var(--font-weight-bold);
+    transition: all var(--transition-normal);
+    min-width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-category-menu:hover {
+    background-color: rgba(163, 240, 89, 0.4);
+    transform: scale(1.05);
+}
+
+.btn-category-menu:active {
+    transform: scale(0.95);
+}
+
+/* Category Menu Dropdown */
+.category-menu {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    margin-top: var(--spacing-lg);
+    padding: var(--spacing-md);
+    background-color: rgba(30, 30, 30, 0.8);
+    border: 1px solid var(--accent-primary);
+    border-radius: var(--radius-md);
+    animation: slideDown var(--transition-normal);
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.category-option {
+    background-color: rgba(163, 240, 89, 0.1);
+    border: 1px solid rgba(163, 240, 89, 0.3);
+    color: var(--text-primary);
+    padding: var(--spacing-md) var(--spacing-lg);
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    font-size: 0.95rem;
+    font-weight: var(--font-weight-bold);
+    transition: all var(--transition-normal);
+    text-align: center;
+}
+
+.category-option:hover {
+    background-color: rgba(163, 240, 89, 0.3);
+    border-color: var(--accent-primary);
+    transform: translateX(5px);
+}
+
+.category-option:active {
+    transform: translateX(3px);
+}
