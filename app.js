@@ -60,8 +60,9 @@ class AppController {
   // GENERATE - THE DECISION MOMENT
   // ==============================
   handleGenerate() {
-    // Generate the decision based on current mode
-    const item = this.engine.generate(this.currentMode);
+    // Generate the decision - always from all if no specific mode selected
+    const mode = this.currentMode === "all" ? "all" : this.currentMode;
+    const item = this.engine.generate(mode);
 
     if (!item) {
       alert("خطأ: لا توجد عناصر متاحة");
