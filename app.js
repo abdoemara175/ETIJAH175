@@ -200,7 +200,7 @@ class AppController {
     output.innerHTML = html;
     output.classList.add("active");
     
-    // Show progress container
+    // Show progress container (but don't start timer yet)
     const progressContainer = document.getElementById("progressContainer");
     if (progressContainer) {
       progressContainer.style.display = "block";
@@ -210,8 +210,16 @@ class AppController {
       }
     }
     
-    // Start timer
-    this.startTimer(item.duration || 5);
+    // Store current item for later use
+    this.currentItem = item;
+    this.timerRunning = false;
+  }
+
+  stopTimer() {
+    if (this.timerInterval) {
+      clearInterval(this.timerInterval);
+      this.timerInterval = null;
+    }
   }
 
   startTimer(minutes) {
@@ -225,7 +233,7 @@ class AppController {
     // Disable all buttons during timer
     this.disableAllButtons(true);
 
-    const updateTimer = () => {
+    this.timerInterval = setInterval(() => {
       const mins = Math.floor(totalSeconds / 60);
       const secs = totalSeconds % 60;
       timerElement.textContent = `${String(mins).padStart(2, '0')}:${String(secs).padStart(2, '0')}`;
@@ -240,6 +248,19 @@ class AppController {
         timerElement.classList.add("timer-done");
         // Enable buttons when timer finishes
         this.disableAllButtons(false);
+        this.timerRunning = false;
+        this.stopTimer();
+        
+        // Log as DONE
+        this.engine.log(this.currentItem, "DONE");
+        this.updateStats();
+        
+        // Clear output
+        const output = document.getElementById("output");
+        if (output) output.innerHTML = '<div class="output-placeholder"><p>اضغط "يلا بينا" لبدء</p></div>';
+        
+        // Generate next
+        setTimeout(() => this.handleGenerate(), 500);
         return;
       }
       
@@ -248,10 +269,7 @@ class AppController {
       }
       
       totalSeconds--;
-      setTimeout(updateTimer, 1000);
-    };
-    
-    updateTimer();
+    }, 1000);
   }
 
   disableAllButtons(disabled) {
