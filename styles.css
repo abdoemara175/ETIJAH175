@@ -749,3 +749,44 @@ body {
     background-color: var(--accent-primary);
     color: var(--bg-primary);
 }
+
+/* Progress Bar */
+.progress-container {
+    width: 100%;
+    padding: var(--spacing-lg);
+    background-color: rgba(163, 240, 89, 0.05);
+    border-radius: var(--radius-md);
+    margin: var(--spacing-lg) 0;
+}
+
+.progress-bar-bg {
+    width: 100%;
+    height: 8px;
+    background-color: rgba(163, 240, 89, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid rgba(163, 240, 89, 0.3);
+}
+
+.progress-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
+    width: 0%;
+    transition: width 1s linear;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(163, 240, 89, 0.5);
+}
+
+/* Button Disabled State */
+.btn:disabled,
+.btn.btn-disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+.btn:disabled:hover,
+.btn.btn-disabled:hover {
+    transform: none;
+    background-color: inherit;
+}

@@ -117,23 +117,46 @@ class AppController {
     output.innerHTML = html;
     output.classList.add("active");
     
+    // Show progress container
+    const progressContainer = document.getElementById("progressContainer");
+    if (progressContainer) {
+      progressContainer.style.display = "block";
+      const progressBar = document.getElementById("progressBar");
+      if (progressBar) {
+        progressBar.style.width = "0%";
+      }
+    }
+    
     // Start timer
     this.startTimer(item.duration || 5);
   }
 
   startTimer(minutes) {
     let totalSeconds = minutes * 60;
+    const initialSeconds = totalSeconds;
     const timerElement = document.getElementById("timer");
+    const progressBar = document.getElementById("progressBar");
     
     if (!timerElement) return;
+
+    // Disable all buttons during timer
+    this.disableAllButtons(true);
 
     const updateTimer = () => {
       const mins = Math.floor(totalSeconds / 60);
       const secs = totalSeconds % 60;
       timerElement.textContent = `${String(mins).padStart(2, '0')}:${String(secs).padStart(2, '0')}`;
       
+      // Update progress bar
+      if (progressBar) {
+        const progress = ((initialSeconds - totalSeconds) / initialSeconds) * 100;
+        progressBar.style.width = progress + '%';
+      }
+      
       if (totalSeconds <= 0) {
         timerElement.classList.add("timer-done");
+        // Enable buttons when timer finishes
+        this.disableAllButtons(false);
         return;
       }
       
@@ -146,6 +169,18 @@ class AppController {
     };
     
     updateTimer();
+  }
+
+  disableAllButtons(disabled) {
+    const buttons = document.querySelectorAll('.btn');
+    buttons.forEach(btn => {
+      btn.disabled = disabled;
+      if (disabled) {
+        btn.classList.add('btn-disabled');
+      } else {
+        btn.classList.remove('btn-disabled');
+      }
+    });
   }
 
 
