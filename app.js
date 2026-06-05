@@ -41,7 +41,15 @@ class AppController {
 
     if (emergencyBtn) emergencyBtn.addEventListener("click", () => this.activateEmergencyMode());
     if (missionsBtn) missionsBtn.addEventListener("click", () => this.setMode("missions"));
-    if (actionsBtn) actionsBtn.addEventListener("click", () => this.setMode("actions"));
+    if (actionsBtn) {
+      actionsBtn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        const dropdown = document.getElementById("actionsDropdown");
+        if (dropdown) {
+          dropdown.style.display = dropdown.style.display === "none" ? "flex" : "none";
+        }
+      });
+    }
 
     // Category buttons
     const categoryButtons = document.querySelectorAll('.btn-category');
@@ -49,7 +57,28 @@ class AppController {
       btn.addEventListener("click", (e) => {
         const category = e.target.getAttribute('data-category');
         this.setMode(category);
+        // Close dropdown after selection
+        const dropdown = document.getElementById("actionsDropdown");
+        if (dropdown) {
+          dropdown.style.display = "none";
+        }
       });
+    });
+    
+    // Close dropdowns when clicking outside
+    document.addEventListener("click", (e) => {
+      const actionsDropdown = document.getElementById("actionsDropdown");
+      const actionsBtn = document.getElementById("actionsBtn");
+      const missionsDropdown = document.getElementById("missionsDropdown");
+      const missionsBtn = document.getElementById("missionsBtn");
+      
+      if (actionsDropdown && actionsBtn && !actionsBtn.contains(e.target) && !actionsDropdown.contains(e.target)) {
+        actionsDropdown.style.display = "none";
+      }
+      
+      if (missionsDropdown && missionsBtn && !missionsBtn.contains(e.target) && !missionsDropdown.contains(e.target)) {
+        missionsDropdown.style.display = "none";
+      }
     });
 
     // Reset button

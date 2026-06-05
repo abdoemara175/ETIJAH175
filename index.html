@@ -85,26 +85,35 @@
                     <button id="emergencyBtn" class="btn btn-mode btn-emergency">
                         وضع الطوارئ
                     </button>
-                    <button id="missionsBtn" class="btn btn-mode">
-                        مهمة
-                    </button>
-                    <button id="actionsBtn" class="btn btn-mode">
-                        فعل
-                    </button>
-                </div>
-                
-                <!-- Category Filters -->
-                <div class="categories-card">
-                    <div class="categories-label">فئات الأفعال:</div>
-                    <div class="categories-grid">
-                        <button class="btn btn-category" data-category="anti_addiction">🛡️ مضاد إدمان</button>
-                        <button class="btn btn-category" data-category="productivity">💼 إنتاجية</button>
-                        <button class="btn btn-category" data-category="reset">🔄 إعادة تعيين</button>
-                        <button class="btn btn-category" data-category="movement">🚶 حركة</button>
-                        <button class="btn btn-category" data-category="fitness">💪 لياقة</button>
-                        <button class="btn btn-category" data-category="mind">🧠 عقل</button>
-                        <button class="btn btn-category" data-category="spiritual">✨ روحي</button>
-                        <button class="btn btn-category" data-category="all">🌐 الكل</button>
+                    <div class="missions-dropdown-container">
+                        <button id="missionsBtn" class="btn btn-mode">
+                            مهمة ▼
+                        </button>
+                        <div class="missions-dropdown-menu" id="missionsDropdown" style="display: none;">
+                            <button class="btn btn-category" data-category="study">📚 دراسة</button>
+                            <button class="btn btn-category" data-category="productivity">💼 إنتاجية</button>
+                            <button class="btn btn-category" data-category="focus">🎯 تركيز</button>
+                            <button class="btn btn-category" data-category="mind">🧠 عقل</button>
+                            <button class="btn btn-category" data-category="learning">🎓 تعلم</button>
+                            <button class="btn btn-category" data-category="fitness">💪 لياقة</button>
+                            <button class="btn btn-category" data-category="life">🏠 حياة</button>
+                            <button class="btn btn-category" data-category="all" style="font-weight: bold; border: 2px solid var(--accent-primary);">🌐 الكل</button>
+                        </div>
+                    </div>
+                    <div class="actions-dropdown-container">
+                        <button id="actionsBtn" class="btn btn-mode">
+                            فعل ▼
+                        </button>
+                        <div class="actions-dropdown-menu" id="actionsDropdown" style="display: none;">
+                            <button class="btn btn-category" data-category="anti_addiction">🛡️ مضاد إدمان</button>
+                            <button class="btn btn-category" data-category="productivity">💼 إنتاجية</button>
+                            <button class="btn btn-category" data-category="reset">🔄 إعادة تعيين</button>
+                            <button class="btn btn-category" data-category="movement">🚶 حركة</button>
+                            <button class="btn btn-category" data-category="fitness">💪 لياقة</button>
+                            <button class="btn btn-category" data-category="mind">🧠 عقل</button>
+                            <button class="btn btn-category" data-category="spiritual">✨ روحي</button>
+                            <button class="btn btn-category" data-category="all" style="font-weight: bold; border: 2px solid var(--accent-primary);">🌐 الكل</button>
+                        </div>
                     </div>
                 </div>
             </div>
