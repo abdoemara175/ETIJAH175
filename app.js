@@ -36,7 +36,12 @@ class AppController {
 
     // Mode buttons
     const emergencyBtn = document.getElementById("emergencyBtn");
+    const missionsBtn = document.getElementById("missionsBtn");
+    const actionsBtn = document.getElementById("actionsBtn");
+
     if (emergencyBtn) emergencyBtn.addEventListener("click", () => this.activateEmergencyMode());
+    if (missionsBtn) missionsBtn.addEventListener("click", () => this.setMode("missions"));
+    if (actionsBtn) actionsBtn.addEventListener("click", () => this.setMode("actions"));
 
     // Category buttons
     const categoryButtons = document.querySelectorAll('.btn-category');
