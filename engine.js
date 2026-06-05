@@ -208,6 +208,11 @@ class FocusEngine {
     } else {
       this.currentState = this.detectState();
     }
+    
+    // Initialize recent actions list if not exists
+    if (!this.recentActions) {
+      this.recentActions = [];
+    }
 
     // Build pool
     let pool = this.buildPool();
@@ -262,6 +267,15 @@ class FocusEngine {
 
     this.lastDecision = chosen;
     console.log(`Selected: ${chosen.title || chosen.action} (ID: ${chosen.id})`);
+    
+    // Add to recent actions to avoid repetition
+    this.recentActions.push(chosen.id);
+    
+    // Keep only last 10 actions
+    if (this.recentActions.length > 10) {
+      this.recentActions.shift();
+    }
+    
     return chosen;
   }
 
