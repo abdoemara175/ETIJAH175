@@ -1,11 +1,13 @@
 // ==============================
 // ETIJAH175 - App Controller
+// Principle: Decision → Execution (No Negotiation)
 // ==============================
 
 class AppController {
   constructor(engine) {
     this.engine = engine;
-    this.currentMode = "all"; // all, missions, actions
+    this.currentMode = "all";
+    this.isExecuting = false;
     this.init();
   }
 
@@ -17,13 +19,13 @@ class AppController {
   }
 
   bindEvents() {
-    // Primary action
+    // Primary action - THE ONLY BUTTON THAT MATTERS
     const generateBtn = document.getElementById("generateBtn");
     if (generateBtn) {
       generateBtn.addEventListener("click", () => this.handleGenerate());
     }
 
-    // Confirmation buttons
+    // Confirmation buttons - MUST RESPOND
     const doneBtn = document.getElementById("doneBtn");
     const skipBtn = document.getElementById("skipBtn");
     const failBtn = document.getElementById("failBtn");
@@ -54,52 +56,83 @@ class AppController {
     }
   }
 
+  // ==============================
+  // GENERATE - THE DECISION MOMENT
+  // ==============================
   handleGenerate() {
-    // Filter based on current mode
+    // Generate the decision
     const item = this.engine.generate();
 
-    if (item) {
-      this.renderItem(item);
-      this.showConfirmationButtons();
-      this.updateStats();
+    if (!item) {
+      alert("خطأ: لا توجد عناصر متاحة");
+      return;
+    }
+
+    // Display it prominently
+    this.renderItem(item);
+    
+    // Show confirmation buttons
+    this.showConfirmationButtons();
+    
+    // Update stats
+    this.updateStats();
+    this.updateStateDisplay();
+
+    // Focus on the output
+    const output = document.getElementById("output");
+    if (output) {
+      output.scrollIntoView({ behavior: "smooth", block: "center" });
     }
   }
 
+  // ==============================
+  // RENDER - MAKE IT CLEAR
+  // ==============================
   renderItem(item) {
     const output = document.getElementById("output");
     if (!output) return;
 
-    const itemType = item.type === "mission" ? "مهمة" : "إجراء";
+    const itemType = item.type === "mission" ? "🎯 مهمة" : "⚡ إجراء";
     const duration = item.duration ? `${item.duration} دقيقة` : "-";
     const intensity = item.intensity ? this.translateIntensity(item.intensity) : "-";
 
     let html = `
-      <h2>${item.title || item.action}</h2>
-      <p><b>النوع:</b> ${itemType}</p>
-      <p><b>الهدف:</b> ${item.goal || "-"}</p>
-      <p><b>الحالة:</b> ${this.translateState(this.engine.state)}</p>
-      <p><b>الشدة:</b> ${intensity}</p>
+      <div class="output-content">
+        <h2>${item.title || item.action}</h2>
+        
+        <div class="output-meta">
+          <p><b>النوع:</b> ${itemType}</p>
+          <p><b>الهدف:</b> ${item.goal || "-"}</p>
+          <p><b>الحالة:</b> ${this.translateState(this.engine.currentState)}</p>
+          <p><b>الشدة:</b> ${intensity}</p>
+        </div>
     `;
 
     if (item.duration) {
       html += `<p><b>المدة:</b> ${duration}</p>`;
     }
 
-    html += `<p><b>شرط النجاح:</b> ${item.success_condition || "-"}</p>`;
+    html += `
+        <p class="success-condition"><b>شرط النجاح:</b> ${item.success_condition || "-"}</p>
+    `;
 
     if (item.guidance) {
-      html += `<p><b>التوجيه:</b> ${item.guidance}</p>`;
+      html += `<p class="guidance"><b>التوجيه:</b> ${item.guidance}</p>`;
     }
+
+    html += `</div>`;
 
     output.innerHTML = html;
     output.classList.add("active");
-    this.updateStateDisplay();
   }
 
+  // ==============================
+  // SHOW CONFIRMATION - NO ESCAPE
+  // ==============================
   showConfirmationButtons() {
     const confirmSection = document.getElementById("confirmSection");
     if (confirmSection) {
-      confirmSection.style.display = "flex";
+      confirmSection.style.display = "grid";
     }
   }
 
@@ -110,23 +143,61 @@ class AppController {
     }
   }
 
+  // ==============================
+  // CONFIRM - RECORD THE RESULT
+  // ==============================
   handleConfirm(status) {
-    this.engine.confirm(status);
+    const result = this.engine.confirm(status);
 
-    let message = "";
-    if (status === "DONE") {
-      message = "ممتاز! تم تحديث الشريط.";
-    } else if (status === "SKIP") {
-      message = "تم تسجيل التخطي. سيتم تعديل الصعوبة.";
-    } else if (status === "FAILED") {
-      message = "تم تسجيل الفشل. سيتم تقليل الشدة.";
-    }
+    // Show feedback
+    const message = result.message;
+    console.log(message);
 
-    alert(message);
+    // Visual feedback
+    this.showFeedback(status, message);
+
+    // Hide buttons
     this.hideConfirmationButtons();
+
+    // Update stats
     this.updateStats();
+    this.updateStateDisplay();
   }
 
+  showFeedback(status, message) {
+    const output = document.getElementById("output");
+    if (!output) return;
+
+    let feedbackClass = "";
+    let icon = "";
+
+    if (status === "DONE") {
+      feedbackClass = "feedback-done";
+      icon = "✓";
+    } else if (status === "SKIP") {
+      feedbackClass = "feedback-skip";
+      icon = "⊘";
+    } else if (status === "FAILED") {
+      feedbackClass = "feedback-failed";
+      icon = "✗";
+    }
+
+    const feedback = document.createElement("div");
+    feedback.className = `feedback ${feedbackClass}`;
+    feedback.innerHTML = `<span>${icon}</span> <span>${message}</span>`;
+
+    output.appendChild(feedback);
+
+    // Auto-hide after 2 seconds
+    setTimeout(() => {
+      feedback.style.opacity = "0";
+      setTimeout(() => feedback.remove(), 300);
+    }, 2000);
+  }
+
+  // ==============================
+  // MODES
+  // ==============================
   setMode(mode) {
     this.currentMode = mode;
     const missionsBtn = document.getElementById("missionsBtn");
@@ -138,14 +209,12 @@ class AppController {
     if (actionsBtn) {
       actionsBtn.style.opacity = mode === "actions" ? "1" : "0.5";
     }
-
-    alert(`تم التبديل إلى وضع: ${mode === "missions" ? "المهام فقط" : "الإجراءات فقط"}`);
   }
 
   activateEmergencyMode() {
-    const antiAddictionActions = this.engine.actions.actions
-      ? this.engine.actions.actions.filter(a => a.category === "anti_addiction")
-      : this.engine.actions.filter(a => a.category === "anti_addiction");
+    const antiAddictionActions = Array.isArray(this.engine.actions)
+      ? this.engine.actions.filter(a => a.category === "anti_addiction")
+      : [];
 
     if (antiAddictionActions.length === 0) {
       alert("لا توجد إجراءات مضادة للإدمان متاحة.");
@@ -157,32 +226,24 @@ class AppController {
     this.showConfirmationButtons();
 
     // Update state badge
-    const stateBadge = document.getElementById("stateDisplay");
-    if (stateBadge) {
-      stateBadge.textContent = "وضع الطوارئ";
-      stateBadge.className = "state-badge urge";
-    }
+    this.updateStateDisplay();
   }
 
+  // ==============================
+  // STATS & DISPLAY
+  // ==============================
   updateStats() {
+    const stats = this.engine.getStats();
+
     const historyCount = document.getElementById("historyCount");
     const streakCount = document.getElementById("streakCount");
 
     if (historyCount) {
-      historyCount.textContent = this.engine.history.length;
+      historyCount.textContent = stats.total;
     }
 
     if (streakCount) {
-      // Calculate current streak (consecutive DONE items)
-      let streak = 0;
-      for (let i = this.engine.history.length - 1; i >= 0; i--) {
-        if (this.engine.history[i].status === "DONE") {
-          streak++;
-        } else {
-          break;
-        }
-      }
-      streakCount.textContent = streak;
+      streakCount.textContent = stats.streak;
     }
   }
 
@@ -201,7 +262,7 @@ class AppController {
     const stateBadge = document.getElementById("stateDisplay");
     if (!stateBadge) return;
 
-    const state = this.engine.state;
+    const state = this.engine.currentState;
     const stateText = this.translateState(state);
     const stateClass = state.toLowerCase();
 
@@ -209,17 +270,9 @@ class AppController {
     stateBadge.className = `state-badge ${stateClass}`;
   }
 
-  handleGenerate() {
-    // Filter based on current mode
-    const item = this.engine.generate();
-
-    if (item) {
-      this.renderItem(item);
-      this.showConfirmationButtons();
-      this.updateStats();
-    }
-  }
-
+  // ==============================
+  // TRANSLATIONS
+  // ==============================
   translateState(state) {
     const stateMap = {
       "IDLE": "خامل",
@@ -244,14 +297,13 @@ class AppController {
 // INITIALIZE APP
 // ==============================
 
-// Wait for engine to be ready
 let appInitialized = false;
 
 function initApp() {
   if (typeof engine !== "undefined" && engine.actions.length > 0 && !appInitialized) {
     const app = new AppController(engine);
     appInitialized = true;
-    console.log("App initialized successfully");
+    console.log("✓ App initialized successfully");
   } else if (!appInitialized) {
     setTimeout(initApp, 500);
   }
