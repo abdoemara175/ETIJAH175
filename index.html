@@ -3,86 +3,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ETIJAH175 - واجهة التركيز الأولى</title>
+    <title>ETIJAH175 - نظام التحكم السلوكي</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>ETIJAH175</h1>
-            <p class="subtitle">نظام التحكم السلوكي الموجه بالتركيز</p>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <h1 class="logo">ETIJAH175</h1>
+                <p class="tagline">نظام التحكم السلوكي الموجه بالتركيز</p>
+            </div>
         </header>
 
-        <main>
-            <!-- State Indicator -->
-            <div class="state-indicator">
-                <span class="label">الحالة الحالية:</span>
-                <span id="stateDisplay" class="state-badge">جاهز</span>
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- State Badge -->
+            <div class="state-card">
+                <span class="state-label">الحالة:</span>
+                <span id="stateDisplay" class="state-badge idle">جاهز</span>
             </div>
 
-            <!-- Primary Action Button -->
-            <div class="action-section">
+            <!-- Primary Action -->
+            <div class="action-card">
                 <button id="generateBtn" class="btn btn-primary">
-                    توليد التالي
+                    <span class="btn-text">توليد التالي</span>
+                    <span class="btn-icon">→</span>
                 </button>
             </div>
 
             <!-- Output Display -->
-            <div id="output" class="output-box">
-                <p class="placeholder">اضغط "توليد التالي" لبدء</p>
+            <div id="output" class="output-card">
+                <div class="output-placeholder">
+                    <p>اضغط "توليد التالي" لبدء</p>
+                </div>
             </div>
 
             <!-- Confirmation Buttons -->
-            <div class="confirmation-section" style="display: none;" id="confirmSection">
-                <button id="doneBtn" class="btn btn-success">
-                    ✓ تم
+            <div class="confirmation-section" id="confirmSection">
+                <button id="doneBtn" class="btn btn-confirm btn-done">
+                    <span>✓</span>
+                    <span>تم</span>
                 </button>
-                <button id="skipBtn" class="btn btn-warning">
-                    ⊘ تخطي
+                <button id="skipBtn" class="btn btn-confirm btn-skip">
+                    <span>⊘</span>
+                    <span>تخطي</span>
                 </button>
-                <button id="failBtn" class="btn btn-danger">
-                    ✗ فشل
-                </button>
-            </div>
-
-            <!-- Secondary Modes -->
-            <div class="modes-section">
-                <button id="emergencyBtn" class="btn btn-emergency">
-                    وضع الطوارئ
-                </button>
-                <button id="missionsBtn" class="btn btn-mode">
-                    المهام فقط
-                </button>
-                <button id="actionsBtn" class="btn btn-mode">
-                    الإجراءات فقط
+                <button id="failBtn" class="btn btn-confirm btn-fail">
+                    <span>✗</span>
+                    <span>فشل</span>
                 </button>
             </div>
 
-            <!-- Stats -->
-            <div class="stats-section">
-                <div class="stat">
-                    <span class="stat-label">السجل:</span>
-                    <span id="historyCount" class="stat-value">0</span>
+            <!-- Grid Layout - Stats & Modes -->
+            <div class="grid-layout">
+                <!-- Stats Section -->
+                <div class="stats-card">
+                    <div class="stat-item">
+                        <span class="stat-label">السجل</span>
+                        <span id="historyCount" class="stat-value">0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">الشريط</span>
+                        <span id="streakCount" class="stat-value">0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">الوقت</span>
+                        <span id="timeDisplay" class="stat-value">--:--</span>
+                    </div>
                 </div>
-                <div class="stat">
-                    <span class="stat-label">الشريط:</span>
-                    <span id="streakCount" class="stat-value">0</span>
-                </div>
-                <div class="stat">
-                    <span class="stat-label">الوقت:</span>
-                    <span id="timeDisplay" class="stat-value">-</span>
+
+                <!-- Modes Section -->
+                <div class="modes-card">
+                    <button id="emergencyBtn" class="btn btn-mode btn-emergency">
+                        وضع الطوارئ
+                    </button>
+                    <button id="missionsBtn" class="btn btn-mode">
+                        المهام فقط
+                    </button>
+                    <button id="actionsBtn" class="btn btn-mode">
+                        الإجراءات فقط
+                    </button>
                 </div>
             </div>
 
-            <!-- Reset Option -->
-            <div class="reset-section">
+            <!-- Reset Button -->
+            <div class="footer-action">
                 <button id="resetBtn" class="btn btn-reset">
                     إعادة تعيين البيانات
                 </button>
             </div>
         </main>
 
-        <footer>
+        <!-- Footer -->
+        <footer class="footer">
             <p>النظام يقرر. المستخدم ينفذ. بدون تفاوض مع التشتت.</p>
         </footer>
     </div>

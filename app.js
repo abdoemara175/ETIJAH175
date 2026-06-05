@@ -93,6 +93,7 @@ class AppController {
 
     output.innerHTML = html;
     output.classList.add("active");
+    this.updateStateDisplay();
   }
 
   showConfirmationButtons() {
@@ -206,6 +207,17 @@ class AppController {
 
     stateBadge.textContent = stateText;
     stateBadge.className = `state-badge ${stateClass}`;
+  }
+
+  handleGenerate() {
+    // Filter based on current mode
+    const item = this.engine.generate();
+
+    if (item) {
+      this.renderItem(item);
+      this.showConfirmationButtons();
+      this.updateStats();
+    }
   }
 
   translateState(state) {
